@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stories - AIESEC in Alexandria</title>
+  <link rel="icon" href="Favicon.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body class="flex flex-col min-h-screen">
+  <nav class="site-nav">
+    <div class="nav-inner container mx-auto">
+      <a href="home.html" class="flex items-center gap-3">
+        <img src="AIESEC Logo.png" alt="AIESEC logo" class="h-12 md:h-14">
+      </a>
+      <div class="nav-links">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="why-alex.html" class="nav-link">Why Alex</a>
+        <a href="stories.html" class="nav-link active">EPs Stories</a>
+        <a href="contact.html" class="nav-link">Contact us</a>
+        <div class="dropdown" data-dropdown>
+          <button class="dropdown-button" type="button" data-dropdown-button aria-expanded="false" aria-controls="opportunity-menu">
+            Opportunities
+            <svg aria-hidden="true" viewBox="0 0 20 20" class="w-4 h-4">
+              <path fill="currentColor" d="M5 7l5 6 5-6H5z" />
+            </svg>
+          </button>
+          <div class="dropdown-panel" id="opportunity-menu" data-dropdown-panel role="menu">
+            <a class="dropdown-item" href="home.html?category=Global%20Volunteer#opportunities" data-opportunity="Global Volunteer">Global Volunteer</a>
+            <a class="dropdown-item" href="home.html?category=Global%20Talent#opportunities" data-opportunity="Global Talent">Global Talent</a>
+            <a class="dropdown-item" href="home.html?category=Global%20Teacher#opportunities" data-opportunity="Global Teacher">Global Teacher</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="font-bold">EPs Stories</h1>
+      <p class="text-mist mt-4">Real experiences from people who lived the journey.</p>
+    </div>
+  </header>
+
+  <section class="section reveal" data-reveal="up">
+    <div class="container mx-auto px-6">
+      <div class="surface">
+        <div class="badge mb-4">Images</div>
+        <h2 class="section-title">EPs Experiences — Photos</h2>
+        <p class="section-subtitle">Hover the strip and scroll to move horizontally.</p>
+        <div id="images-loading" class="text-mist mt-6">Loading photos...</div>
+        <div id="image-carousel" class="carousel hidden"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight reveal" data-reveal="left">
+    <div class="container mx-auto px-6">
+      <div class="surface">
+        <div class="badge mb-4">Videos</div>
+        <h2 class="section-title">EPs Experiences — Videos</h2>
+        <p class="section-subtitle">Scroll left or right to explore the video highlights.</p>
+        <div id="videos-loading" class="text-mist mt-6">Loading videos...</div>
+        <div id="video-carousel" class="carousel hidden"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer mt-auto">
+    <div class="container mx-auto px-6 footer-grid md:grid-cols-3">
+      <div class="text-center md:text-left">
+        <h4 class="text-xl font-semibold text-gold">AIESEC in Alexandria</h4>
+        <p class="text-mist">Developing Leadership since 1995.</p>
+      </div>
+      <div class="text-center">
+        <div class="social-links">
+          <a href="https://www.facebook.com/aiesecegypt" target="_blank" rel="noopener" aria-label="Facebook">
+            <img src="facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/aiesecinalexandria?igsh=NmtiN2VidXlpZzNp" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="instagram.png" alt="Instagram">
+          </a>
+          <a href="https://www.linkedin.com/company/aiesec-in-egypt1/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img src="linkedin.png" alt="LinkedIn">
+          </a>
+        </div>
+      </div>
+      <div class="text-center md:text-right">
+        <p class="text-mist">Created by: <a href="https://www.linkedin.com/in/ahmedhallul" target="_blank" rel="noopener" class="text-gold">Ahmed Hallul</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4" onclick="closeLightbox(event)">
+    <span class="absolute top-4 right-6 text-white text-5xl cursor-pointer" onclick="closeLightbox(event)">&times;</span>
+    <img id="lightbox-image" src="" class="max-h-[90vh] max-w-[90vw] rounded-2xl shadow-2xl object-contain border border-white/20" alt="Enlarged view">
+  </div>
+
+  <script src="site.js"></script>
+  <script>
+    const API_URL = 'https://n8n.srv1235027.hstgr.cloud/webhook/stories';
+
+    function openLightbox(url) {
+      const modal = document.getElementById('lightbox-modal');
+      document.getElementById('lightbox-image').src = url;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(event) {
+      if (event.target.id !== 'lightbox-image') {
+        const modal = document.getElementById('lightbox-modal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        setTimeout(() => { document.getElementById('lightbox-image').src = ''; }, 200);
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    function setupCarouselWheel(container) {
+      if (!container) return;
+      container.addEventListener('wheel', (event) => {
+        if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+        event.preventDefault();
+        container.scrollLeft += event.deltaY;
+      }, { passive: false });
+    }
+
+    async function loadStories() {
+      const imageCarousel = document.getElementById('image-carousel');
+      const videoCarousel = document.getElementById('video-carousel');
+      const imagesLoading = document.getElementById('images-loading');
+      const videosLoading = document.getElementById('videos-loading');
+
+      try {
+        const res = await fetch(API_URL);
+        if (!res.ok) throw new Error(`Server Error (${res.status})`);
+
+        const rawData = await res.json();
+        let data = [];
+        if (Array.isArray(rawData) && rawData.length > 0 && rawData[0].files) data = rawData[0].files;
+        else if (rawData.files) data = rawData.files;
+        else if (Array.isArray(rawData)) data = rawData;
+
+        const images = data.filter((file) => (file.mimeType || '').includes('image'));
+        const videos = data.filter((file) => (file.mimeType || '').includes('video'));
+
+        if (images.length === 0) {
+          imagesLoading.textContent = 'No photos available yet.';
+        } else {
+          imagesLoading.classList.add('hidden');
+          imageCarousel.classList.remove('hidden');
+          images.forEach((file) => {
+            const thumbUrl = `https://drive.google.com/thumbnail?id=${file.id}&sz=w800`;
+            const largeUrl = `https://drive.google.com/thumbnail?id=${file.id}&sz=w1600`;
+            imageCarousel.innerHTML += `
+              <button class="carousel-item" onclick="openLightbox('${largeUrl}')">
+                <img src="${thumbUrl}" alt="Story" loading="lazy">
+              </button>`;
+          });
+          setupCarouselWheel(imageCarousel);
+        }
+
+        if (videos.length === 0) {
+          videosLoading.textContent = 'No videos available yet.';
+        } else {
+          videosLoading.classList.add('hidden');
+          videoCarousel.classList.remove('hidden');
+          videos.forEach((file) => {
+            const vidUrl = `https://drive.google.com/file/d/${file.id}/preview`;
+            videoCarousel.innerHTML += `
+              <div class="carousel-item video">
+                <iframe src="${vidUrl}" allow="autoplay"></iframe>
+              </div>`;
+          });
+          setupCarouselWheel(videoCarousel);
+        }
+      } catch (err) {
+        if (document.getElementById('images-loading')) {
+          document.getElementById('images-loading').textContent = `Failed to load: ${err.message}`;
+        }
+        if (document.getElementById('videos-loading')) {
+          document.getElementById('videos-loading').textContent = `Failed to load: ${err.message}`;
+        }
+      }
+    }
+
+    loadStories();
+  </script>
+</body>
+</html>
+

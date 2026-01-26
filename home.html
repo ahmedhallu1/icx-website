@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIESEC in Alexandria</title>
+  <link rel="icon" href="Favicon.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body class="flex flex-col min-h-screen">
+  <nav class="site-nav">
+    <div class="nav-inner container mx-auto">
+      <a href="home.html" class="flex items-center gap-3">
+        <img src="AIESEC Logo.png" alt="AIESEC logo" class="h-12 md:h-14">
+      </a>
+      <div class="nav-links">
+        <a href="home.html" class="nav-link active">Home</a>
+        <a href="why-alex.html" class="nav-link">Why Alex</a>
+        <a href="stories.html" class="nav-link">EPs Stories</a>
+        <a href="contact.html" class="nav-link">Contact us</a>
+        <div class="dropdown" data-dropdown>
+          <button class="dropdown-button" type="button" data-dropdown-button aria-expanded="false" aria-controls="opportunity-menu">
+            Opportunities
+            <svg aria-hidden="true" viewBox="0 0 20 20" class="w-4 h-4">
+              <path fill="currentColor" d="M5 7l5 6 5-6H5z" />
+            </svg>
+          </button>
+          <div class="dropdown-panel" id="opportunity-menu" data-dropdown-panel role="menu">
+            <a class="dropdown-item" href="home.html?category=Global%20Volunteer#opportunities" data-opportunity="Global Volunteer">Global Volunteer</a>
+            <a class="dropdown-item" href="home.html?category=Global%20Talent#opportunities" data-opportunity="Global Talent">Global Talent</a>
+            <a class="dropdown-item" href="home.html?category=Global%20Teacher#opportunities" data-opportunity="Global Teacher">Global Teacher</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-bg parallax-layer" data-depth="0.08" data-speed="0.14"></div>
+
+    <div class="hero-content container mx-auto">
+      <h1 class="hero-title font-bold">Alexandria</h1>
+      <p class="hero-subtitle">The Pearl of the Mediterranean</p>
+      <div class="mt-8 flex justify-center">
+        <a href="stories.html" class="btn-ghost">See EPs Stories</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="safety-index" class="section reveal" data-reveal="right">
+    <div class="container mx-auto px-6">
+      <div class="surface safety-panel">
+        <div class="safety-main">
+          <div class="badge">2025 Safety Index</div>
+          <h2 class="section-title">Alexandria leads 2025 safety index for African cities</h2>
+          <p class="section-subtitle">Recognized for its secure, welcoming environment for residents and international participants.</p>
+        </div>
+        <div class="safety-action">
+          <a class="btn-ghost w-fit" href="https://thepeninsulaqatar.com/article/20/01/2026/alexandria-leads-2025-safety-index-for-african-cities" target="_blank" rel="noopener">Read the source</a>
+        </div>
+        <div class="safety-source">
+          <p>Source: The Peninsula Qatar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="alexandria-video" class="section reveal" data-reveal="left">
+    <div class="container mx-auto px-6">
+      <div class="surface flex flex-col lg:flex-row gap-10 items-center">
+        <div class="lg:w-1/2">
+          <div class="badge mb-4">City in motion</div>
+          <h2 class="section-title">See Alexandria from the shore</h2>
+          <p class="section-subtitle">A short cinematic glimpse of the sea, the streets, and the spirit of Alexandria.</p>
+        </div>
+        <div class="lg:w-1/2 w-full">
+          <div class="video-frame">
+            <iframe src="https://www.youtube-nocookie.com/embed/K-GSbhZESJ4?rel=0&modestbranding=1" title="Alexandria video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <p class="text-sm text-mist mt-3">If the video does not load, watch it on <a href="https://youtu.be/K-GSbhZESJ4" target="_blank" rel="noopener" class="text-gold">YouTube</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="opportunities" class="section reveal" data-reveal="up">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="section-title">Choose your path</h2>
+      <p class="section-subtitle mx-auto">Select a program to explore open positions tailored to your goals.</p>
+      <div class="opportunity-grid mt-10 md:grid-cols-3">
+        <div class="opportunity-card">
+          <div class="program-panel volunteer">
+            <img src="GV TOP RIGHT WHITE.png" alt="Global Volunteer mark" class="program-mark">
+            <span class="program-label">Program</span>
+            <h3>Global Volunteer</h3>
+          </div>
+          <button class="opportunity-cta" type="button" data-opportunity="Global Volunteer">View Openings</button>
+        </div>
+        <div class="opportunity-card">
+          <div class="program-panel talent">
+            <img src="GTA TOP RIGHT WHITE.png" alt="Global Talent mark" class="program-mark">
+            <span class="program-label">Program</span>
+            <h3>Global Talent</h3>
+          </div>
+          <button class="opportunity-cta" type="button" data-opportunity="Global Talent">View Openings</button>
+        </div>
+        <div class="opportunity-card">
+          <div class="program-panel teacher">
+            <img src="GTE TOP RIGHT WHITE.png" alt="Global Teacher mark" class="program-mark">
+            <span class="program-label">Program</span>
+            <h3>Global Teacher</h3>
+          </div>
+          <button class="opportunity-cta" type="button" data-opportunity="Global Teacher">View Openings</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="listings" class="section-tight hidden">
+    <div class="container mx-auto px-6">
+      <div class="listings-panel reveal" data-reveal="up">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-6">
+          <h3 id="category-title" class="text-2xl"></h3>
+          <div id="filters-area" class="flex flex-wrap gap-3 hidden">
+            <select id="filter-dynamic" onchange="applyFilters()" class="filter-select">
+              <option value="all">All</option>
+            </select>
+            <select id="filter-duration" onchange="applyFilters()" class="filter-select">
+              <option value="all">All Durations</option>
+            </select>
+          </div>
+        </div>
+        <div id="cards-container" class="grid md:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="application-process" class="section reveal" data-reveal="right">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="section-title">Application Process</h2>
+        <p class="section-subtitle mx-auto">Two clear tracks to guide your journey from application to realization.</p>
+      </div>
+      <div class="process-grid md:grid-cols-2">
+        <div class="process-card volunteer">
+          <h3>
+            <img src="GV LOGO COLOR.png" alt="Global Volunteer logo" class="process-logo">
+            Incoming Global Volunteer (IGV)
+          </h3>
+          <ul>
+            <li><span class="step-index">1</span>Apply</li>
+            <li><span class="step-index">2</span>Interview</li>
+            <li><span class="step-index">3</span>Get Accepted</li>
+            <li><span class="step-index">4</span>Get Approved</li>
+            <li><span class="step-index">5</span>Realization</li>
+          </ul>
+        </div>
+        <div class="process-card talent">
+          <h3>
+            <img src="GTA LOGO COLOR.png" alt="Global Talent logo" class="process-logo">
+            Incoming Global Talent (IGT)
+          </h3>
+          <ul>
+            <li><span class="step-index">1</span>Apply</li>
+            <li><span class="step-index">2</span>Interview with Host</li>
+            <li><span class="step-index">3</span>Interview with Partner</li>
+            <li><span class="step-index">4</span>Get Accepted</li>
+            <li><span class="step-index">5</span>Realization</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visa" class="section reveal" data-reveal="left">
+    <div class="container mx-auto px-6">
+      <div class="visa-panel">
+        <div class="badge mb-4">Find your visa category</div>
+        <h2 class="section-title">Find your visa category</h2>
+        <p class="section-subtitle">Check the available visa types for your country before arriving in Egypt.</p>
+        <div class="visa-links">
+          <a class="visa-link" href="#visa">E-Visa</a>
+          <a class="visa-link" href="#visa">Tourist Visa</a>
+          <a class="visa-link" href="#visa">Visa on Arrival</a>
+          <a class="visa-link" href="#visa">Free Visa</a>
+          <a class="visa-link" href="#visa">Visa Extension protocol</a>
+        </div>
+        <div class="visa-form">
+          <label for="visa-country" class="text-mist">Enter your country</label>
+          <input id="visa-country" class="visa-input" type="text" placeholder="e.g., Spain">
+          <button id="visa-search" class="btn-primary" type="button">Check visa type</button>
+        </div>
+        <div id="visa-result" class="visa-result"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer mt-auto">
+    <div class="container mx-auto px-6 footer-grid md:grid-cols-3">
+      <div class="text-center md:text-left">
+        <p class="text-mist">Developing Leadership since 1995.</p>
+      </div>
+      <div class="text-center">
+        <div class="social-links">
+          <a href="https://www.facebook.com/aiesecegypt" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M23.998 12.006c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.512c-1.49 0-1.953.925-1.953 1.874v2.25h3.328l-.532 3.47h-2.796v8.385c5.737-.9 10.125-5.864 10.125-11.854z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/aiesecinalexandria?igsh=NmtiN2VidXlpZzNp" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.352 3.608 1.327.975.975 1.265 2.242 1.327 3.608.058 1.266.069 1.646.069 4.832 0 3.186-.011 3.566-.069 4.832-.062 1.366-.352 2.633-1.327 3.608-.975.975-2.242 1.265-3.608 1.327-1.266.058-1.646.069-4.85.069-3.204 0-3.584-.011-4.85-.069-1.366-.062-2.633-.352-3.608-1.327-.975-.975-1.265-2.242-1.327-3.608C2.174 15.566 2.163 15.186 2.163 12c0-3.186.011-3.566.069-4.832.062-1.366.352-2.633 1.327-3.608.975-.975 2.242-1.265 3.608-1.327C8.433 2.175 8.813 2.163 12 2.163zm0-2.163C8.741 0 8.332.015 7.053.072 5.72.132 4.478.443 3.46 1.46 2.443 2.478 2.132 3.72 2.072 5.053.015 8.332 0 8.741 0 12c0 3.259.015 3.668.072 4.947.06 1.333.371 2.575 1.388 3.593 1.018 1.017 2.26 1.328 3.593 1.388 1.279.057 1.688.072 4.947.072 3.259 0 3.668-.015 4.947-.072 1.333-.06 2.575-.371 3.593-1.388 1.017-1.018 1.328-2.26 1.388-3.593.057-1.279.072-1.688.072-4.947 0-3.259-.015-3.668-.072-4.947-.06-1.333-.371-2.575-1.388-3.593C19.575.443 18.333.132 17 .072 15.668.015 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/company/aiesec-in-egypt1/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M22.225 0H1.771C.792 0 0 .774 0 1.727v20.545C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.273V1.727C24 .774 23.2 0 22.222 0h.003zM7.337 20.452H4.386V9h2.951v11.452zM5.862 7.433a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42zM20.452 20.452h-2.953v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H10.56V9h2.834v1.561h.04c.395-.75 1.36-1.54 2.797-1.54 2.992 0 3.54 1.97 3.54 4.53v6.901z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="text-center md:text-right">
+        <p class="text-mist">Created by: <a href="https://www.linkedin.com/in/ahmedhallul" target="_blank" rel="noopener" class="text-gold">Ahmed Hallul</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+  <script>
+    const N8N_OPPS_URL = 'https://n8n.srv1235027.hstgr.cloud/webhook/opportunities';
+    const N8N_VISA_URL = 'https://n8n.srv1235027.hstgr.cloud/webhook/visa';
+
+    const CATEGORY_META = {
+      'Global Volunteer': {
+        title: 'Global Volunteer Opportunities',
+        icon: 'GV LOGO COLOR.png',
+        accent: 'var(--volunteer)'
+      },
+      'Global Talent': {
+        title: 'Global Talent Opportunities',
+        icon: 'GTA LOGO COLOR.png',
+        accent: 'var(--talent)'
+      },
+      'Global Teacher': {
+        title: 'Global Teacher Opportunities',
+        icon: 'GTE LOGO COLOR.png',
+        accent: 'var(--teacher)'
+      }
+    };
+
+    let currentData = [];
+    let currentCategory = '';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const requestedCategory = params.get('category');
+      if (requestedCategory) {
+        filterOpportunities(requestedCategory);
+      }
+
+      setupParallax();
+      setupVisaLookup();
+    });
+
+    function setupParallax() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const layers = document.querySelectorAll('.parallax-layer');
+      if (!layers.length) return;
+
+      const state = { mouseX: 0, mouseY: 0, scrollY: 0 };
+
+      window.addEventListener('mousemove', (event) => {
+        state.mouseX = event.clientX / window.innerWidth - 0.5;
+        state.mouseY = event.clientY / window.innerHeight - 0.5;
+      });
+
+      window.addEventListener('scroll', () => {
+        state.scrollY = window.scrollY || window.pageYOffset;
+      });
+
+      const animate = () => {
+        layers.forEach((layer) => {
+          const depth = parseFloat(layer.dataset.depth || 0);
+          const speed = parseFloat(layer.dataset.speed || 0);
+          const translateX = state.mouseX * depth * 60;
+          const scrollOffset = state.scrollY * speed * 0.25;
+          const translateY = state.mouseY * depth * 40 - scrollOffset;
+          layer.style.transform = `translate3d(${translateX}px, ${translateY}px, 0)`;
+        });
+        window.requestAnimationFrame(animate);
+      };
+
+      animate();
+    }
+
+    function setupVisaLookup() {
+      const input = document.getElementById('visa-country');
+      const button = document.getElementById('visa-search');
+      const result = document.getElementById('visa-result');
+      if (!input || !button || !result) return;
+
+      const lookup = async () => {
+        const query = input.value.trim();
+        if (!query) {
+          result.textContent = 'Please enter a country name.';
+          return;
+        }
+        result.textContent = 'Checking visa category...';
+
+        try {
+          const response = await fetch(`${N8N_VISA_URL}?country=${encodeURIComponent(query)}`);
+          if (!response.ok) throw new Error('Server Error');
+          const data = await response.json();
+          const record = findVisaRecord(data, query);
+
+          if (!record) {
+            result.textContent = 'No visa category found for that country.';
+            return;
+          }
+
+          const visaType = record.visaType || record.visa || record.Visa || record.category || record.Category || record['Visa Type'];
+          const link = record.link || record.url || record.source || record.Source;
+          result.innerHTML = visaType
+            ? `Visa category: <strong>${visaType}</strong>${link ? ` - <a href="${link}" target="_blank" rel="noopener" class="text-gold">view details</a>` : ''}`
+            : 'Visa category data found, but no type was returned.';
+        } catch (error) {
+          result.textContent = 'Unable to load visa data. Please try again later.';
+        }
+      };
+
+      button.addEventListener('click', lookup);
+      input.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') lookup();
+      });
+    }
+
+    function findVisaRecord(data, query) {
+      const normalized = query.trim().toLowerCase();
+      if (Array.isArray(data)) {
+        return data.find((row) => {
+          const value = row.country || row.Country || row.name || row.Name;
+          return value && String(value).trim().toLowerCase() === normalized;
+        });
+      }
+      return data;
+    }
+
+    async function filterOpportunities(category) {
+      currentCategory = category;
+      const listings = document.getElementById('listings');
+      const container = document.getElementById('cards-container');
+      const title = document.getElementById('category-title');
+      const meta = CATEGORY_META[category] || { title: `${category} Opportunities` };
+
+      listings.classList.remove('hidden');
+      const revealPanel = listings.querySelector('.reveal');
+      if (revealPanel) revealPanel.classList.add('is-visible');
+
+      title.innerHTML = `
+        <span class="inline-flex items-center gap-3">
+          ${meta.icon ? `<img src="${meta.icon}" alt="${category} logo" class="h-8 w-8">` : ''}
+          <span>${meta.title}</span>
+        </span>`;
+
+      container.innerHTML = `
+        <div class="col-span-3 flex justify-center py-12">
+          <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
+        </div>`;
+
+      listings.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      try {
+        const response = await fetch(N8N_OPPS_URL, { method: 'GET' });
+        if (!response.ok) throw new Error('Server Error');
+        let allData = await response.json();
+        if (!Array.isArray(allData)) allData = [allData];
+
+        currentData = allData.filter((opp) => {
+          const id = (opp.id || '').toUpperCase();
+          let itemCat = '';
+
+          if (id.startsWith('TA')) itemCat = 'Global Talent';
+          else if (id.startsWith('T')) itemCat = 'Global Teacher';
+          else if (id.startsWith('V')) itemCat = 'Global Volunteer';
+
+          return itemCat === category;
+        });
+
+        setupFilters();
+        applyFilters();
+      } catch (error) {
+        container.innerHTML = '<div class="col-span-3 text-red-300 text-center">Connection Error</div>';
+      }
+    }
+
+    function setupFilters() {
+      const dynamicFilter = document.getElementById('filter-dynamic');
+      const durFilter = document.getElementById('filter-duration');
+      const filterArea = document.getElementById('filters-area');
+
+      const durations = [...new Set(currentData.map((i) => i.duration).filter((x) => x))];
+
+      durFilter.innerHTML = '<option value="all">All Durations</option>';
+      durations.forEach((d) => durFilter.innerHTML += `<option value="${d}">${d}</option>`);
+
+      let options = [];
+      let label = 'All';
+      let useDynamic = false;
+
+      if (currentCategory.includes('Talent')) {
+        options = [...new Set(currentData.map((i) => i.subProduct).filter((x) => x))];
+        label = 'All Sub-Products';
+        useDynamic = true;
+      } else if (currentCategory.includes('Teacher')) {
+        options = [...new Set(currentData.map((i) => i.subProduct).filter((x) => x))];
+        label = 'All Languages';
+        useDynamic = true;
+      } else if (currentCategory.includes('Volunteer')) {
+        options = [...new Set(currentData.map((i) => i.position).filter((x) => x))];
+        label = 'All Projects';
+        useDynamic = true;
+      }
+
+      dynamicFilter.innerHTML = `<option value="all">${label}</option>`;
+      options.forEach((o) => dynamicFilter.innerHTML += `<option value="${o}">${o}</option>`);
+
+      filterArea.classList.remove('hidden');
+      if (useDynamic) dynamicFilter.classList.remove('hidden');
+      else dynamicFilter.classList.add('hidden');
+    }
+
+    function formatSalary(s) {
+      if (!s && s !== 0) return '';
+      const num = parseFloat(String(s).replace(/[^0-9.]/g, ''));
+      if (isNaN(num)) return s;
+      return num.toLocaleString('en-US') + ' EGP';
+    }
+
+    function applyFilters() {
+      const container = document.getElementById('cards-container');
+      const dynVal = document.getElementById('filter-dynamic').value;
+      const durVal = document.getElementById('filter-duration').value;
+
+      const filtered = currentData.filter((item) => {
+        if (dynVal !== 'all') {
+          if (currentCategory.includes('Talent') && item.subProduct !== dynVal) return false;
+          if (currentCategory.includes('Teacher') && item.subProduct !== dynVal) return false;
+          if (currentCategory.includes('Volunteer') && item.position !== dynVal) return false;
+        }
+        if (durVal !== 'all' && item.duration !== durVal) return false;
+        return true;
+      });
+
+      container.innerHTML = '';
+      if (filtered.length === 0) {
+        container.innerHTML = '<p class="col-span-3 text-center text-mist">No results match.</p>';
+        return;
+      }
+
+      filtered.forEach((opp) => {
+        let cardContent = '';
+        let accent = 'var(--gold-400)';
+        const id = (opp.id || '').toUpperCase();
+
+        if (id.startsWith('TA')) {
+          accent = 'var(--talent)';
+          cardContent = `
+            <h4 class="text-lg font-semibold text-ink">${opp.position}</h4>
+            <span class="accent-chip">${opp.subProduct}</span>
+            <div class="text-sm text-mist space-y-1">
+              <p><strong>Company:</strong> ${opp.company}</p>
+              <p><strong>Duration:</strong> ${opp.duration}</p>
+              <p><strong>Start Date:</strong> ${opp.startDate}</p>
+              <p><strong>Salary:</strong>
+                <a href="https://www.numbeo.com/cost-of-living/in/Alexandria" target="_blank" rel="noopener" class="text-gold font-semibold">${formatSalary(opp.salary)}</a>
+              </p>
+              <p><strong>Openings:</strong> ${opp.openings}</p>
+            </div>`;
+        } else if (id.startsWith('V')) {
+          accent = 'var(--volunteer)';
+          cardContent = `
+            <h4 class="text-lg font-semibold text-ink">${opp.position}</h4>
+            <div class="text-sm text-mist space-y-1">
+              <p><strong>Company:</strong> ${opp.company}</p>
+              <p><strong>Duration:</strong> ${opp.duration}</p>
+              <p><strong>Openings:</strong> ${opp.openings}</p>
+            </div>`;
+        } else if (id.startsWith('T')) {
+          accent = 'var(--teacher)';
+          cardContent = `
+            <h4 class="text-lg font-semibold text-ink">${opp.position}</h4>
+            <span class="accent-chip">${opp.subProduct}</span>
+            <div class="text-sm text-mist space-y-1">
+              <p><strong>Company:</strong> ${opp.company}</p>
+              <p><strong>Duration:</strong> ${opp.duration}</p>
+              <p><strong>Start Date:</strong> ${opp.startDate}</p>
+              <p><strong>Salary:</strong>
+                <a href="https://www.numbeo.com/cost-of-living/in/Alexandria" target="_blank" rel="noopener" class="text-gold font-semibold">${formatSalary(opp.salary)}</a>
+              </p>
+              <p><strong>Openings:</strong> ${opp.openings}</p>
+            </div>`;
+        }
+
+        const card = `
+          <div class="listing-card" style="--accent: ${accent};">
+            <div class="space-y-3">${cardContent}</div>
+            <a href="${opp.link}" target="_blank" rel="noopener" class="accent-btn">Details</a>
+          </div>`;
+        container.innerHTML += card;
+      });
+    }
+  </script>
+</body>
+</html>
