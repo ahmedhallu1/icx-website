@@ -360,11 +360,11 @@ img {
 
 .page-hero {
   position: relative;
-  padding: 200px 0 120px;
-  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.45) 0%, rgba(6, 18, 38, 0.9) 100%), url('stanley.png');
+  padding: 160px 0 140px;
+  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('stanley.png');
   background-size: cover;
-  background-position: center 75%;
-  min-height: 56vh;
+  background-position: center 20%;
+  min-height: 60vh;
   overflow: hidden;
 }
 
@@ -374,8 +374,8 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 220px;
-  background: linear-gradient(180deg, rgba(6, 18, 38, 0) 0%, rgba(6, 18, 38, 0.6) 55%, #061226 100%);
+  height: 480px;
+  background: linear-gradient(180deg, rgba(6, 18, 38, 0) 0%, rgba(6, 18, 38, 0.15) 20%, rgba(6, 18, 38, 0.35) 40%, rgba(6, 18, 38, 0.6) 60%, rgba(6, 18, 38, 0.85) 80%, #061226 100%);
   z-index: 1;
 }
 
@@ -480,10 +480,11 @@ img {
 
 .program-panel {
   width: 100%;
+  max-width: 280px;
   border-radius: 22px;
   padding: 0;
-  min-height: 240px;
-  aspect-ratio: 1 / 1;
+  min-height: 180px;
+  aspect-ratio: 5 / 4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -498,15 +499,14 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 78%;
+  width: 55%;
   height: auto;
-  max-height: 78%;
+  max-height: 55%;
   object-fit: contain;
-  object-position: top right;
   opacity: 1;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
 }
 
 .program-panel.volunteer {
@@ -690,37 +690,26 @@ img {
 
 .safety-panel {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 24px;
   min-height: 220px;
 }
 
-.safety-main {
+.safety-content {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.safety-main .badge {
+.safety-content .badge {
   align-self: flex-start;
   width: fit-content;
 }
 
-.safety-aside {
-  display: grid;
-  gap: 18px;
-  align-items: center;
-  justify-items: end;
-  grid-template-rows: 1fr auto;
-}
-
-.safety-source {
+.safety-link {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  text-align: right;
-  font-size: 0.8rem;
-  color: var(--mist);
-  opacity: 0.8;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .visa-panel {
@@ -769,14 +758,45 @@ img {
   color: var(--mist);
 }
 
+.visa-result-summary {
+  font-weight: 600;
+}
+
+.visa-type-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.visa-type-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(6, 18, 38, 0.55);
+}
+
+.visa-type-name {
+  font-weight: 600;
+  color: var(--ink);
+}
+
 .visa-details-link {
-  background: none;
-  border: none;
+  background: rgba(6, 18, 38, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   color: var(--gold-400);
   font-weight: 600;
   cursor: pointer;
-  padding: 0;
-  margin-left: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.visa-details-link:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 .visa-modal {
@@ -819,12 +839,125 @@ img {
 .visa-modal-body {
   display: grid;
   gap: 12px;
+  max-height: 70vh;
+  overflow-y: auto;
 }
 
-.visa-modal-list {
+.visa-section {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border-left: 3px solid var(--gold-400);
+}
+
+.visa-list {
   margin: 8px 0 0;
-  padding-left: 18px;
+  padding-left: 0;
+  list-style: none;
   color: var(--mist);
+  line-height: 1.6;
+  display: grid;
+  gap: 12px;
+}
+
+.visa-list li {
+  margin: 0;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.visa-list li::before {
+  content: none;
+}
+
+
+.visa-num {
+  display: inline-block;
+  min-width: 28px;
+  color: var(--gold-400);
+  font-weight: 600;
+  text-align: right;
+}
+
+.visa-country-note {
+  margin-bottom: 12px;
+  padding: 10px;
+  background: rgba(6, 18, 38, 0.4);
+  border-radius: 8px;
+}
+
+.visa-country-note strong {
+  color: var(--gold-400);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.visa-list-small {
+  margin: 6px 0 0 16px;
+  padding-left: 0;
+  list-style: none;
+  color: var(--mist);
+  font-size: 0.9rem;
+}
+
+.visa-list-small li {
+  margin-bottom: 6px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.visa-list-small li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--gold-400);
+}
+
+.visa-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.visa-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.visa-table th,
+.visa-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: left;
+  vertical-align: top;
+}
+
+.visa-table th {
+  color: var(--gold-400);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.visa-table td {
+  color: var(--mist);
+}
+
+.visa-table td em {
+  color: rgba(214, 224, 242, 0.65);
+  font-style: normal;
+}
+
+.visa-step-note {
+  display: block;
+  margin-top: 6px;
+  color: rgba(214, 224, 242, 0.75);
+  font-size: 0.85rem;
 }
 
 .carousel {
@@ -884,18 +1017,16 @@ img {
   .safety-source {
     margin-top: auto;
   }
-}
 
-.why-card h3 {
-  color: var(--gold-400);
-}
-.contact-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 26px;
-  padding: 28px;
-  text-align: center;
-  box-shadow: 0 18px 36px rgba(2, 8, 18, 0.35);
+  .safety-action {
+    align-self: center;
+    justify-self: end;
+  }
+
+  .safety-link {
+    justify-content: flex-end;
+    justify-self: end;
+  }
 }
 
 .contact-hierarchy {
@@ -906,6 +1037,20 @@ img {
 .contact-group {
   display: grid;
   gap: 18px;
+}
+
+.contact-card {
+  background: rgba(7, 19, 38, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(2, 8, 18, 0.35);
+}
+
+.contact-card.contact-member {
+  background: rgba(7, 19, 38, 0.6);
+  border-radius: 20px;
 }
 
 .contact-team {

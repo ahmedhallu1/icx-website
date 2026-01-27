@@ -1,0 +1,912 @@
+{
+  "visaCategories": {
+    "E-Visa": {
+      "title": "E-Visa",
+      "description": "Details and Documents Requirement for E-visa",
+      "requirements": [
+        {
+          "number": "1",
+          "text": "A valid passport for 6 months from the date of arrival in Egypt"
+        },
+        {
+          "number": "2",
+          "text": "National ID card"
+        },
+        {
+          "number": "3",
+          "text": "Bank statement ( atleast 6 months)"
+        },
+        {
+          "number": "4",
+          "text": "Passport size photographs (2-4 copies)"
+        },
+        {
+          "number": "5",
+          "text": "Flight tickets (Both way)"
+        },
+        {
+          "number": "6",
+          "text": "Invitation Letter ( Issued by AIESEC Egypt)"
+        },
+        {
+          "number": "7",
+          "text": "Accommodation Details"
+        }
+      ],
+      "countryExtras": [
+        {
+          "number": "1",
+          "country": "Argentina",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "2",
+          "country": "Benin",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "3",
+          "country": "Bolivia",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "4",
+          "country": "Brazil",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "5",
+          "country": "Cameroon",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "6",
+          "country": "Colombia",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "7",
+          "country": "Cote D'Ivoire",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "8",
+          "country": "Ecuador",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "9",
+          "country": "Paraguay",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "10",
+          "country": "Peru",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "11",
+          "country": "Venezuela",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        }
+      ],
+      "applicationSteps": [
+        {
+          "number": "1",
+          "text": "E-Visa Create an account on this website",
+          "note": "This is the on official governmental website"
+        },
+        {
+          "number": "2",
+          "text": "Log in",
+          "note": "Make sure to remeber your username and password"
+        },
+        {
+          "number": "3",
+          "text": "Click apply now",
+          "note": null
+        },
+        {
+          "number": "4",
+          "text": "Select tourist visa type",
+          "note": null
+        },
+        {
+          "number": "5",
+          "text": "Fill the application form",
+          "note": "Incomplete applications lead to rejection"
+        },
+        {
+          "number": "6",
+          "text": "Pay using a Visa card, MasterCard or other debit cards",
+          "note": "Non-refundable"
+        },
+        {
+          "number": "7",
+          "text": "Await approval via email, then download and print the e-Visa from your account.",
+          "note": null
+        }
+      ],
+      "applicationStepsTitle": "Application steps",
+      "generalNotes": [
+        {
+          "number": "1",
+          "text": "Some the countries don't have the option to fill out online so those\ncountries have to submit it physically to the Egyptian Embassy\nor Counslate (Contact the Egyptian embassy in your country)."
+        },
+        {
+          "number": "2",
+          "text": "The countries filling the E visa online will need to show all original\ndocuments at the time of immigration. Please bring the original\ndocumnets that are needed."
+        },
+        {
+          "number": "3",
+          "text": "It is recommended that please contact the Egyptian Embassy or\nConsulate office in your own country to avoid any type of error\nand delay in the visa process."
+        }
+      ],
+      "generalNotesTitle": "Points to be remembered by all countries\n(Please read carefully)"
+    },
+    "Tourist Visa": {
+      "title": "Tourist Visa",
+      "description": "Details and Documents required for Tourist Visa (Normal Visa Issued for tourism)",
+      "requirements": [
+        {
+          "number": "1",
+          "text": "Original Passport with at least 2 blank pages and validity of 6 months from the date of travel."
+        },
+        {
+          "number": "2",
+          "text": "Bank statement of the past six months."
+        },
+        {
+          "number": "3",
+          "text": "National Id card"
+        },
+        {
+          "number": "4",
+          "text": "Passport size photograph (2-4 copies)"
+        },
+        {
+          "number": "5",
+          "text": "Invitation Letter (Issued by AIESEC Egypt)"
+        },
+        {
+          "number": "6",
+          "text": "Accomodation Details"
+        },
+        {
+          "number": "7",
+          "text": "Self Declaration (performa issued by the Embassy)"
+        },
+        {
+          "number": "8",
+          "text": "Visa Fees (Online or offline depend on the country)"
+        },
+        {
+          "number": "9",
+          "text": "Return Ticket (Will be asked at immigration desk)"
+        },
+        {
+          "number": "10",
+          "text": "Fight Tickets to Egypt (Depend upon the country)"
+        },
+        {
+          "number": "11",
+          "text": "Income Certificate (Depend on countries)"
+        }
+      ],
+      "countryExtras": [
+        {
+          "number": "1",
+          "country": "Ethiopia",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "2",
+          "country": "Indonessia",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "3",
+          "country": "Liberia",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "4",
+          "country": "Nigeria",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "5",
+          "country": "Panama",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "6",
+          "country": "Rwanda",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "7",
+          "country": "Senegal",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "8",
+          "country": "Ghana",
+          "extra": "Income Certificate"
+        },
+        {
+          "number": "9",
+          "country": "Guatemala",
+          "extra": "Income Certificate"
+        },
+        {
+          "number": "10",
+          "country": "Kenya",
+          "extra": "No criminal certificate"
+        },
+        {
+          "number": "11",
+          "country": "Philippines",
+          "extra": "Family registration certificate"
+        },
+        {
+          "number": "12",
+          "country": "Tanzania",
+          "extra": "If students then letter for the proof"
+        },
+        {
+          "number": "13",
+          "country": "Thailand",
+          "extra": "If students then letter for the proof"
+        },
+        {
+          "number": "14",
+          "country": "Togo",
+          "extra": "If students then letter for the proof"
+        },
+        {
+          "number": "15",
+          "country": "Tunisia",
+          "extra": "Security Permit"
+        },
+        {
+          "number": "16",
+          "country": "Uganda",
+          "extra": "If students then letter for the proof"
+        },
+        {
+          "number": "17",
+          "country": "Vietnam",
+          "extra": "Student Certificate, House registration record\nCertificate from school and bank"
+        }
+      ],
+      "generalNotes": [
+        {
+          "number": "1",
+          "text": "To start the visa process there is no online method everything will be done by the Egyptian\nEmbassy in your country. (It is recommended to take assistance from a trusted travel\nagency)."
+        },
+        {
+          "number": "2",
+          "text": "The documents mention here and the visa booklet may differ from country to country so make\nsure to have the details from the Embassy in your country."
+        },
+        {
+          "number": "3",
+          "text": "The return ticket from Egypt to your home country is compulsory for all countries and it will be\nchecked on the immigration desk. Make sure you book it before coming to Egypt."
+        },
+        {
+          "number": "4",
+          "text": "Some of the documents for some countries will need to be notarized by the government before\nsubmitting for the visa so please start the process at your earliest."
+        },
+        {
+          "number": "5",
+          "text": "Take the details of the documents which will be needed at the time of immigration from the\nEgyptian Embassy."
+        }
+      ],
+      "generalNotesTitle": "Points to be remembered for all countries\n(Please read carefully)"
+    },
+    "Visa on Arrival": {
+      "title": "Visa on Arrival",
+      "description": "Details Documents required for Visa on Arrival",
+      "requirements": [
+        {
+          "number": "1",
+          "text": "Original Passport with at least 2 blank pages and validity of 6 months from the date of travel."
+        },
+        {
+          "number": "2",
+          "text": "National ID card"
+        },
+        {
+          "number": "3",
+          "text": "Bank statement ( atleast 6 months)"
+        },
+        {
+          "number": "4",
+          "text": "Passport size photographs (2-4 copies)"
+        },
+        {
+          "number": "5",
+          "text": "Flight tickets (Both way)"
+        },
+        {
+          "number": "6",
+          "text": "Invitation Letter ( Issued by AIESEC Egypt)"
+        },
+        {
+          "number": "7",
+          "text": "Accommodation details"
+        },
+        {
+          "number": "8",
+          "text": "Visa fee in Euros or US dollars ( 25$ single entry,60$ multiple entry)"
+        }
+      ],
+      "countryExtras": [
+        {
+          "number": "1",
+          "country": "Argentina",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "2",
+          "country": "Benin",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "3",
+          "country": "Bolivia",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "4",
+          "country": "Brazil",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "5",
+          "country": "Cameroon",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "6",
+          "country": "Colombia",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "7",
+          "country": "Cote D'Ivoire",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "8",
+          "country": "Panama",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "9",
+          "country": "Paraguay",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "10",
+          "country": "Peru",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        },
+        {
+          "number": "11",
+          "country": "Venezuela",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        }
+      ],
+      "generalNotes": [
+        {
+          "number": "1",
+          "text": "There is no 100% guarantee that a visa on arrival will be issued once you are in Egypt, so if there is an\nany other pre-visa option available please go for it."
+        },
+        {
+          "number": "2",
+          "text": "Fee must be paid in euros or dollars only ( no exchange for any other currency at Egyptian airports)\nsometimes in some countries cash option is also not available you only have to pay online."
+        },
+        {
+          "number": "3",
+          "text": "The visa queue might be long and the immigration process may take hours although in the same\ncharge other pre-visa can be taken."
+        }
+      ],
+      "generalNotesTitle": "Points to be remembered for all countries.\n(Please Read Carefully)"
+    },
+    "Free Visa": {
+      "title": "Free Visa",
+      "description": "Details Documents required for Free Entry / No Visa Entry",
+      "requirements": [
+        {
+          "number": "1",
+          "text": "Original Passport with at least 2 blank pages and validity of 6 months from the date of travel."
+        },
+        {
+          "number": "2",
+          "text": "National ID card"
+        },
+        {
+          "number": "3",
+          "text": "Bank statement ( atleast 6 months)"
+        },
+        {
+          "number": "4",
+          "text": "Flight tickets (Both way)"
+        },
+        {
+          "number": "5",
+          "text": "Invitation Letter ( Issued by AIESEC Egypt)"
+        },
+        {
+          "number": "6",
+          "text": "Accommodation details"
+        }
+      ],
+      "countryExtras": [
+        {
+          "number": "1",
+          "country": "Malaysia",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+        }
+      ],
+      "generalNotes": [
+        {
+          "number": "1",
+          "text": "Please Contact the Egyptian Embassy in your country to cross-check the documents."
+        },
+        {
+          "number": "2",
+          "text": "Please bring all the necessary documents"
+        },
+        {
+          "number": "3",
+          "text": "Return flight tickets will be checked on immigration without that you will be not allowed to enter"
+        }
+      ],
+      "generalNotesTitle": "Points to be remembered for all countries\n(Please Read Carefully"
+    },
+    "Visa Extension protocol": {
+      "title": "Visa Extension protocol",
+      "description": "Details Documents required for Visa on Arrival",
+      "requirements": [
+        {
+          "number": "1",
+          "text": "An eligible and valid passport"
+        },
+        {
+          "number": "2",
+          "text": "The existing e-visa that you used to enter and stay in Egypt."
+        },
+        {
+          "number": "3",
+          "text": "The fees for a visa extension in cash. (about 45 $ you may need to pay several fees for ex: late application fees, etc)"
+        },
+        {
+          "number": "4",
+          "text": "Passport size photographs (2-4 copies)"
+        },
+        {
+          "number": "5",
+          "text": "Address in Egypt where you are currently staying (Accommodation details)"
+        }
+      ],
+      "generalNotes": [
+        {
+          "number": "1",
+          "text": "visa extension for three more months, and no other validity is available. The e-visa extension is called Foreign Residence Card. It will be issued in the form of a plastic card."
+        },
+        {
+          "number": "2",
+          "text": "you are allowed 2 weeks of overstay on your egypt visa without fines or consequences being imposed on you"
+        },
+        {
+          "number": "3",
+          "text": "Usually, applicants need to visit the office twice. The first time, they fill out the e-visa application form in person and submit the required documents, including a photograph and fee payment. They will also get their biometrics done on the first visit. On your second visit, typically the next day of your first visit, you will pay visa processing fees before getting the visa extension."
+        },
+        {
+          "number": "4",
+          "text": "please remember that this process cannot be completed online, and you need to visit the relevant department in person to get your e-visa extended or renewed."
+        },
+        {
+          "number": "5",
+          "text": "The Egyptian Passports, Immigration, and Nationality Administration office is where you will visit and submit the visa renewal application. It is located in the Police Academy, Abbasiya, Cairo. You can visit the office between 8 a.m. to 2 p.m. daily except for Friday, and Saturday is dedicated to pickups."
+        },
+        {
+          "number": "6",
+          "text": "Or you can visit the Mugamma Building located in Tahrir Square, Cairo. It is open from 8:00 a.m. to 3:30 p.m."
+        },
+        {
+          "number": "7",
+          "text": "If You Overstay Your Egypt visa This can lead to drastic consequences such as a fine or travel ban. If the government decides to ban you from entering Egypt, you will not be able to get a travel permit in the future or as long as the ban stays"
+        },
+        {
+          "number": "8",
+          "text": "Overstaying your e-visa in Egypt can result in a fine. The amount you need to pay depends on the duration of visa expiration and the length of time you have overstayed in Egypt. Generally,overstaying your visa for up to three months will result in a USD 100 penalty. If you overstayed for over three months, you would be charged accordingly."
+        },
+        {
+          "number": "9",
+          "text": "The fines will be paid at the airport when you leave Egypt. This could take some time as the airports are busy areas, so you might need to wait for your turn in the queue. Therefore, we suggest you arrive at the airport well ahead of your flight so that you have enough time to pay the fine, clear customs and other security procedures, and board the plane on time."
+        }
+      ],
+      "generalNotesTitle": "Points to be remembered for all countries.\n(Please Read Carefully)"
+    }
+  },
+  "countries": {
+    "Albania": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Algeria": [
+      "Tourist Visa"
+    ],
+    "Argentina": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Armenia": [
+      "E-Visa"
+    ],
+    "Australia": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Austria": [
+      "E-Visa"
+    ],
+    "Azerbaijan": [
+      "E-Visa"
+    ],
+    "Bahrain": [
+      "E-Visa"
+    ],
+    "Bangladesh": [
+      "Tourist Visa"
+    ],
+    "Belgium": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Benin": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Bolivia": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Bosnia & Herzegovina": [
+      "E-Visa"
+    ],
+    "Brazil": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Bulgaria": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Burkina Faso": [
+      "Tourist Visa"
+    ],
+    "Cambodia": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Cameroon": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Canada": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Chile": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Colombia": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Costa Rica": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Cote D'Ivoire": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Croatia": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Czech Republic": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Denmark": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Dominican Republic": [
+      "Tourist Visa",
+      "Visa on Arrival"
+    ],
+    "Ecuador": [
+      "E-Visa"
+    ],
+    "El Salvador": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Estonia": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Ethiopia": [
+      "Tourist Visa"
+    ],
+    "Finland": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "France": [
+      "E-Visa"
+    ],
+    "Georgia": [
+      "Visa on Arrival"
+    ],
+    "Germany": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Ghana": [
+      "Tourist Visa"
+    ],
+    "Greece": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Guatemala": [
+      "Tourist Visa"
+    ],
+    "Hong Kong": [
+      "E-Visa"
+    ],
+    "Hungary": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Iceland": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "India": [
+      "Tourist Visa",
+      "E-Visa"
+    ],
+    "Indonesia": [
+      "Tourist Visa"
+    ],
+    "Italy": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Japan": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Jordan": [
+      "Free Visa"
+    ],
+    "Kazakhstan": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Kenya": [
+      "Tourist Visa"
+    ],
+    "Korea": [
+      "E-Visa"
+    ],
+    "Kuwait": [
+      "E-Visa",
+      "Free Visa"
+    ],
+    "Kyrgyzstan": [
+      "Tourist Visa"
+    ],
+    "Latvia": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Lebanon": [
+      "Free Visa",
+      "E-Visa"
+    ],
+    "Liberia": [
+      "Tourist Visa"
+    ],
+    "Lithuania": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Mainland of China": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Malawi": [
+      "Tourist Visa"
+    ],
+    "Malaysia": [
+      "E-Visa",
+      "Free Visa"
+    ],
+    "Mexico": [
+      "E-Visa"
+    ],
+    "Moldova": [
+      "E-Visa"
+    ],
+    "Mongolia": [
+      "Tourist Visa"
+    ],
+    "Montenegro": [
+      "E-Visa"
+    ],
+    "Morocco": [
+      "Tourist Visa"
+    ],
+    "Mozambique": [
+      "Tourist Visa"
+    ],
+    "Myanmar": [
+      "Tourist Visa"
+    ],
+    "Namibia": [
+      "Tourist Visa"
+    ],
+    "Nepal": [
+      "Tourist Visa"
+    ],
+    "New Zealand": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Nicaragua": [
+      "Tourist Visa"
+    ],
+    "Nigeria": [
+      "Tourist Visa"
+    ],
+    "Norway": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Pakistan": [
+      "Tourist Visa"
+    ],
+    "Panama": [
+      "Tourist Visa"
+    ],
+    "Paraguay": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Peru": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Philippines": [
+      "Tourist Visa"
+    ],
+    "Poland": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Portugal": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Republic of Macedonia": [
+      "E-Visa"
+    ],
+    "Romania": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Russia": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Rwanda": [
+      "Tourist Visa"
+    ],
+    "Senegal": [
+      "Tourist Visa"
+    ],
+    "Serbia": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Singapore": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Slovakia": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "South Africa": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Spain": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Sri Lanka": [
+      "Tourist Visa"
+    ],
+    "Sweden": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Switzerland": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Taiwan": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Tanzania": [
+      "Tourist Visa",
+      "E-Visa"
+    ],
+    "Thailand": [
+      "Tourist Visa"
+    ],
+    "The Netherlands": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Togo": [
+      "Tourist Visa"
+    ],
+    "Tunisia": [
+      "Tourist Visa"
+    ],
+    "Turkey": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Uganda": [
+      "Tourist Visa"
+    ],
+    "Ukraine": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "United Arab Emirates": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "United Kingdom": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "United States": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Venezuela": [
+      "E-Visa",
+      "Visa on Arrival"
+    ],
+    "Vietnam": [
+      "Tourist Visa"
+    ]
+  }
+}
