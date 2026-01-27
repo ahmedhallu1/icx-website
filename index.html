@@ -33,6 +33,34 @@
           </div>
         </div>
       </div>
+      <button class="nav-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="sr-only">Open menu</span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+      <div class="container mx-auto px-6">
+        <a href="index.html" class="mobile-link active">Home</a>
+        <a href="why-alex.html" class="mobile-link">Why Alex</a>
+        <a href="stories.html" class="mobile-link">EPs Stories</a>
+        <a href="contact.html" class="mobile-link">Contact us</a>
+        <div class="mobile-divider"></div>
+        <div class="dropdown mobile-dropdown" data-dropdown>
+          <button class="dropdown-button" type="button" data-dropdown-button aria-expanded="false" aria-controls="mobile-opportunity-menu">
+            Opportunities
+            <svg aria-hidden="true" viewBox="0 0 20 20" class="w-4 h-4">
+              <path fill="currentColor" d="M5 7l5 6 5-6H5z" />
+            </svg>
+          </button>
+          <div class="dropdown-panel" id="mobile-opportunity-menu" data-dropdown-panel role="menu">
+            <a class="dropdown-item" href="index.html?category=Global%20Volunteer#opportunities" data-opportunity="Global Volunteer">Global Volunteer</a>
+            <a class="dropdown-item" href="index.html?category=Global%20Talent#opportunities" data-opportunity="Global Talent">Global Talent</a>
+            <a class="dropdown-item" href="index.html?category=Global%20Teacher#opportunities" data-opportunity="Global Teacher">Global Teacher</a>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
 
@@ -62,13 +90,13 @@
 
   <section id="alexandria-video" class="section reveal" data-reveal="left">
     <div class="container mx-auto px-6">
-      <div class="surface flex flex-col lg:flex-row gap-10 items-center">
+      <div class="surface flex flex-col lg:flex-row gap-10 items-stretch lg:items-center">
         <div class="lg:w-1/2">
           <div class="badge mb-4">City in motion</div>
           <h2 class="section-title">See Alexandria from the shore</h2>
           <p class="section-subtitle">A short cinematic glimpse of the sea, the streets, and the spirit of Alexandria.</p>
         </div>
-        <div class="lg:w-1/2 w-full">
+        <div class="lg:w-1/2 w-full self-stretch video-column">
           <div class="video-frame">
             <iframe src="https://drive.google.com/file/d/1y3uPb3A6rKYubF2etqnOJ7RB5qT-JTty/preview" title="Alexandria video" allow="autoplay" loading="lazy"></iframe>
           </div>
@@ -510,8 +538,9 @@
         </span>`;
 
       container.innerHTML = `
-        <div class="col-span-3 flex justify-center py-12">
-          <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
+        <div class="col-span-3 flex flex-col items-center justify-center py-12 gap-4">
+          <div class="loading-spinner" aria-hidden="true" style="--spinner-color: ${meta.accent || 'var(--gold-400)'};"></div>
+          <div class="text-mist">Loading opportunities...</div>
         </div>`;
 
       listings.scrollIntoView({ behavior: 'smooth', block: 'start' });

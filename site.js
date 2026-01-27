@@ -1,30 +1,67 @@
 (() => {
   document.documentElement.classList.add('js');
 
-  const dropdown = document.querySelector('[data-dropdown]');
-  const dropdownButton = document.querySelector('[data-dropdown-button]');
-  const dropdownPanel = document.querySelector('[data-dropdown-panel]');
+  const dropdowns = Array.from(document.querySelectorAll('[data-dropdown]'));
 
-  const closeDropdown = () => {
-    if (!dropdown) return;
-    dropdown.classList.remove('open');
-    if (dropdownButton) dropdownButton.setAttribute('aria-expanded', 'false');
+  const closeDropdowns = (except) => {
+    dropdowns.forEach((dropdown) => {
+      if (except && dropdown === except) return;
+      dropdown.classList.remove('open');
+      const button = dropdown.querySelector('[data-dropdown-button]');
+      if (button) button.setAttribute('aria-expanded', 'false');
+    });
   };
 
-  const toggleDropdown = (event) => {
-    if (!dropdown) return;
-    event.preventDefault();
-    const isOpen = dropdown.classList.toggle('open');
-    if (dropdownButton) dropdownButton.setAttribute('aria-expanded', String(isOpen));
-  };
+  dropdowns.forEach((dropdown) => {
+    const button = dropdown.querySelector('[data-dropdown-button]');
+    const panel = dropdown.querySelector('[data-dropdown-panel]');
+    if (!button || !panel) return;
 
-  if (dropdownButton && dropdownPanel) {
-    dropdownButton.addEventListener('click', toggleDropdown);
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      const isOpen = dropdown.classList.toggle('open');
+      button.setAttribute('aria-expanded', String(isOpen));
+      if (isOpen) closeDropdowns(dropdown);
+    });
+  });
+
+  if (dropdowns.length) {
     document.addEventListener('click', (event) => {
-      if (!dropdown.contains(event.target)) closeDropdown();
+      const insideDropdown = dropdowns.some((dropdown) => dropdown.contains(event.target));
+      if (!insideDropdown) closeDropdowns();
     });
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') closeDropdown();
+      if (event.key === 'Escape') closeDropdowns();
+    });
+  }
+
+  const nav = document.querySelector('.site-nav');
+  const mobileToggle = document.querySelector('[data-mobile-toggle]');
+  const mobileMenu = document.querySelector('[data-mobile-menu]');
+
+  const closeMobileMenu = () => {
+    if (!nav) return;
+    nav.classList.remove('mobile-open');
+    if (mobileToggle) mobileToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  if (nav && mobileToggle && mobileMenu) {
+    mobileToggle.addEventListener('click', (event) => {
+      event.preventDefault();
+      const isOpen = nav.classList.toggle('mobile-open');
+      mobileToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!nav.contains(event.target)) closeMobileMenu();
+    });
+
+    mobileMenu.addEventListener('click', (event) => {
+      if (event.target.closest('a')) closeMobileMenu();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMobileMenu();
     });
   }
 
@@ -61,7 +98,7 @@
       if (isHome && typeof window.filterOpportunities === 'function') {
         event.preventDefault();
         window.filterOpportunities(category);
-        closeDropdown();
+        closeDropdowns();
       }
     });
   }
