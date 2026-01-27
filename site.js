@@ -56,7 +56,7 @@
       if (!category) return;
 
       const path = window.location.pathname.toLowerCase();
-      const isHome = path.endsWith('/home.html') || path.endsWith('home.html') || path === '/' || path === '';
+      const isHome = path.endsWith('/index.html') || path.endsWith('index.html') || path.endsWith('/') || path === '' || path === '/';
 
       if (isHome && typeof window.filterOpportunities === 'function') {
         event.preventDefault();
