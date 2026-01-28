@@ -12,7 +12,7 @@
   <nav class="site-nav">
     <div class="nav-inner container mx-auto">
       <a href="index.html" class="flex items-center gap-3">
-        <img src="aiesec-logo.png" alt="AIESEC logo" class="h-12 md:h-14">
+        <img src="aiesec-logo.png" alt="AIESEC logo" class="h-10 md:h-12">
       </a>
       <div class="nav-links">
         <a href="index.html" class="nav-link active">Home</a>
@@ -268,7 +268,10 @@
       const params = new URLSearchParams(window.location.search);
       const requestedCategory = params.get('category');
       if (requestedCategory) {
-        filterOpportunities(requestedCategory);
+        // Add a small delay to ensure DOM is fully ready
+        setTimeout(() => {
+          filterOpportunities(requestedCategory);
+        }, 100);
       }
 
       setupParallax();
@@ -543,7 +546,10 @@
           <div class="text-mist">Loading opportunities...</div>
         </div>`;
 
-      listings.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Scroll to listings section with a slight delay to ensure rendering
+      setTimeout(() => {
+        listings.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
 
       try {
         const response = await fetch(N8N_OPPS_URL, { method: 'GET' });

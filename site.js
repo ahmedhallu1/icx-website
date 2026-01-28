@@ -95,10 +95,13 @@
       const path = window.location.pathname.toLowerCase();
       const isHome = path.endsWith('/index.html') || path.endsWith('index.html') || path.endsWith('/') || path === '' || path === '/';
 
+      event.preventDefault();
       if (isHome && typeof window.filterOpportunities === 'function') {
-        event.preventDefault();
         window.filterOpportunities(category);
         closeDropdowns();
+      } else {
+        // Navigate to home page with category parameter
+        window.location.href = `index.html?category=${encodeURIComponent(category)}#opportunities`;
       }
     });
   }

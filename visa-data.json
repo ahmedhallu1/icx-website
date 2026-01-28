@@ -14,7 +14,7 @@
         },
         {
           "number": "3",
-          "text": "Bank statement ( atleast 6 months)"
+          "text": "Bank statement (at least 6 months)"
         },
         {
           "number": "4",
@@ -26,7 +26,7 @@
         },
         {
           "number": "6",
-          "text": "Invitation Letter ( Issued by AIESEC Egypt)"
+          "text": "Invitation Letter (Issued by AIESEC Egypt)"
         },
         {
           "number": "7",
@@ -37,57 +37,57 @@
         {
           "number": "1",
           "country": "Argentina",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "2",
           "country": "Benin",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "3",
           "country": "Bolivia",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "4",
           "country": "Brazil",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "5",
           "country": "Cameroon",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "6",
           "country": "Colombia",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "7",
           "country": "Cote D'Ivoire",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "8",
           "country": "Ecuador",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "9",
           "country": "Paraguay",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "10",
           "country": "Peru",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "11",
           "country": "Venezuela",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         }
       ],
       "applicationSteps": [
@@ -99,7 +99,7 @@
         {
           "number": "2",
           "text": "Log in",
-          "note": "Make sure to remeber your username and password"
+          "note": "Make sure to remember your username and password"
         },
         {
           "number": "3",
@@ -135,14 +135,14 @@
         },
         {
           "number": "2",
-          "text": "The countries filling the E visa online will need to show all original\ndocuments at the time of immigration. Please bring the original\ndocumnets that are needed."
+          "text": "The countries filling the E visa online will need to show all original\ndocuments at the time of immigration. Please bring the original\ndocuments that are needed."
         },
         {
           "number": "3",
           "text": "It is recommended that please contact the Egyptian Embassy or\nConsulate office in your own country to avoid any type of error\nand delay in the visa process."
         }
       ],
-      "generalNotesTitle": "Points to be remembered by all countries\n(Please read carefully)"
+      "generalNotesTitle": "Points to be remembered by all countries\n(Please read carefuly)"
     },
     "Tourist Visa": {
       "title": "Tourist Visa",
@@ -170,7 +170,7 @@
         },
         {
           "number": "6",
-          "text": "Accomodation Details"
+          "text": "Accommodation Details"
         },
         {
           "number": "7",
@@ -197,37 +197,37 @@
         {
           "number": "1",
           "country": "Ethiopia",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "2",
-          "country": "Indonessia",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "country": "Indonesia",
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "3",
           "country": "Liberia",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "4",
           "country": "Nigeria",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "5",
           "country": "Panama",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "6",
           "country": "Rwanda",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "7",
           "country": "Senegal",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "8",
@@ -302,7 +302,7 @@
           "text": "Take the details of the documents which will be needed at the time of immigration from the\nEgyptian Embassy."
         }
       ],
-      "generalNotesTitle": "Points to be remembered for all countries\n(Please read carefully)"
+      "generalNotesTitle": "Points to be remembered for all countries\n(Please read carefuly)"
     },
     "Visa on Arrival": {
       "title": "Visa on Arrival",
@@ -318,7 +318,7 @@
         },
         {
           "number": "3",
-          "text": "Bank statement ( atleast 6 months)"
+          "text": "Bank statement (at least 6 months)"
         },
         {
           "number": "4",
@@ -330,7 +330,7 @@
         },
         {
           "number": "6",
-          "text": "Invitation Letter ( Issued by AIESEC Egypt)"
+          "text": "Invitation Letter (Issued by AIESEC Egypt)"
         },
         {
           "number": "7",
@@ -338,64 +338,64 @@
         },
         {
           "number": "8",
-          "text": "Visa fee in Euros or US dollars ( 25$ single entry,60$ multiple entry)"
+          "text": "Visa fee in Euros or US dollars ($25 single entry, $60 multiple entry)"
         }
       ],
       "countryExtras": [
         {
           "number": "1",
           "country": "Argentina",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "2",
           "country": "Benin",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "3",
           "country": "Bolivia",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "4",
           "country": "Brazil",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "5",
           "country": "Cameroon",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "6",
           "country": "Colombia",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "7",
           "country": "Cote D'Ivoire",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "8",
           "country": "Panama",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "9",
           "country": "Paraguay",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "10",
           "country": "Peru",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         },
         {
           "number": "11",
           "country": "Venezuela",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         }
       ],
       "generalNotes": [
@@ -405,14 +405,14 @@
         },
         {
           "number": "2",
-          "text": "Fee must be paid in euros or dollars only ( no exchange for any other currency at Egyptian airports)\nsometimes in some countries cash option is also not available you only have to pay online."
+          "text": "Fee must be paid in euros or dollars only (no exchange for any other currency at Egyptian airports)\nSometimes in some countries cash option is also not available - you only have to pay online."
         },
         {
           "number": "3",
           "text": "The visa queue might be long and the immigration process may take hours although in the same\ncharge other pre-visa can be taken."
         }
       ],
-      "generalNotesTitle": "Points to be remembered for all countries.\n(Please Read Carefully)"
+      "generalNotesTitle": "Points to be remembered for all countries.\n(Please Read carefuly)"
     },
     "Free Visa": {
       "title": "Free Visa",
@@ -428,7 +428,7 @@
         },
         {
           "number": "3",
-          "text": "Bank statement ( atleast 6 months)"
+          "text": "Bank statement (at least 6 months)"
         },
         {
           "number": "4",
@@ -436,7 +436,7 @@
         },
         {
           "number": "5",
-          "text": "Invitation Letter ( Issued by AIESEC Egypt)"
+          "text": "Invitation Letter (Issued by AIESEC Egypt)"
         },
         {
           "number": "6",
@@ -447,7 +447,7 @@
         {
           "number": "1",
           "country": "Malaysia",
-          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be carefull"
+          "extra": "Yellow Fever Certificate\n\n(Please contact the Egypt Embassy\nin your country and get the complete\ndetails about this)\n\nNote: This is mandatory for\nimmigration so please be careful"
         }
       ],
       "generalNotes": [
@@ -464,7 +464,7 @@
           "text": "Return flight tickets will be checked on immigration without that you will be not allowed to enter"
         }
       ],
-      "generalNotesTitle": "Points to be remembered for all countries\n(Please Read Carefully"
+      "generalNotesTitle": "Points to be remembered for all countries\n(Please Read carefuly"
     },
     "Visa Extension protocol": {
       "title": "Visa Extension protocol",
@@ -529,7 +529,7 @@
           "text": "The fines will be paid at the airport when you leave Egypt. This could take some time as the airports are busy areas, so you might need to wait for your turn in the queue. Therefore, we suggest you arrive at the airport well ahead of your flight so that you have enough time to pay the fine, clear customs and other security procedures, and board the plane on time."
         }
       ],
-      "generalNotesTitle": "Points to be remembered for all countries.\n(Please Read Carefully)"
+      "generalNotesTitle": "Points to be remembered for all countries.\n(Please Read carefuly)"
     }
   },
   "countries": {
