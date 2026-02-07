@@ -432,6 +432,7 @@ img {
   display: flex;
   align-items: center;
   overflow: hidden;
+  background-color: #061226;
 }
 
 .hero::after {
@@ -440,8 +441,8 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 520px;
-  background: linear-gradient(180deg, rgba(6, 18, 38, 0) 0%, rgba(6, 18, 38, 0.08) 15%, rgba(6, 18, 38, 0.18) 28%, rgba(6, 18, 38, 0.32) 40%, rgba(6, 18, 38, 0.48) 52%, rgba(6, 18, 38, 0.62) 62%, rgba(6, 18, 38, 0.72) 70%, rgba(6, 18, 38, 0.82) 78%, rgba(6, 18, 38, 0.9) 86%, rgba(6, 18, 38, 0.96) 93%, #061226 100%);
+  height: 420px;
+  background: linear-gradient(180deg, rgba(6, 18, 38, 0) 0%, rgba(6, 18, 38, 0.05) 18%, rgba(6, 18, 38, 0.14) 34%, rgba(6, 18, 38, 0.26) 50%, rgba(6, 18, 38, 0.4) 64%, rgba(6, 18, 38, 0.56) 76%, rgba(6, 18, 38, 0.7) 86%, rgba(6, 18, 38, 0.82) 93%, #061226 100%);
   z-index: 1;
   pointer-events: none;
 }
@@ -449,9 +450,10 @@ img {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.72) 68%, rgba(6, 18, 38, 0.92) 100%), url('Stanly-Bridge-Alexandria-Egypt-Tours-Portal.jpg.jpeg'), url('stanley.png');
-  background-size: cover;
-  background-position: center;
+  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.15) 0%, rgba(6, 18, 38, 0.45) 65%, rgba(6, 18, 38, 0.7) 100%), url('Stanly-Bridge-Alexandria-Egypt-Tours-Portal.jpg.jpeg');
+  background-size: 100% 100%, cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
   transform: scale(1.05);
   -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 30%, rgba(0, 0, 0, 0.98) 40%, rgba(0, 0, 0, 0.93) 50%, rgba(0, 0, 0, 0.85) 60%, rgba(0, 0, 0, 0.72) 68%, rgba(0, 0, 0, 0.58) 74%, rgba(0, 0, 0, 0.42) 80%, rgba(0, 0, 0, 0.28) 85%, rgba(0, 0, 0, 0.16) 90%, rgba(0, 0, 0, 0.07) 95%, rgba(0, 0, 0, 0.02) 98%, rgba(0, 0, 0, 0) 100%);
   mask-image: linear-gradient(180deg, #000 0%, #000 30%, rgba(0, 0, 0, 0.98) 40%, rgba(0, 0, 0, 0.93) 50%, rgba(0, 0, 0, 0.85) 60%, rgba(0, 0, 0, 0.72) 68%, rgba(0, 0, 0, 0.58) 74%, rgba(0, 0, 0, 0.42) 80%, rgba(0, 0, 0, 0.28) 85%, rgba(0, 0, 0, 0.16) 90%, rgba(0, 0, 0, 0.07) 95%, rgba(0, 0, 0, 0.02) 98%, rgba(0, 0, 0, 0) 100%);
@@ -472,23 +474,31 @@ img {
 .page-hero {
   position: relative;
   padding: 160px 0 140px;
-  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('Alexandria-Corniche-alexandria.jpg.jpeg'), url('stanley.png');
-  background-size: cover;
-  background-position: center 20%;
+  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.15) 0%, rgba(6, 18, 38, 0.42) 55%, rgba(6, 18, 38, 0.7) 100%), url('Alexandria-Corniche-alexandria.jpg.jpeg');
+  background-size: 100% 100%, cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+  background-color: #061226;
   min-height: 60vh;
   overflow: hidden;
 }
 
 .page-hero.page-hero-why {
-  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('Alexandria-Corniche-alexandria.jpg.jpeg'), url('stanley.png');
+  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.15) 0%, rgba(6, 18, 38, 0.42) 55%, rgba(6, 18, 38, 0.7) 100%), url('Alexandria-Corniche-alexandria.jpg.jpeg');
 }
 
 .page-hero.page-hero-stories {
-  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('A-picture-from-above-of-the-city-of-Alexandria-in-Egypt.jpg.jpeg');
+  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.15) 0%, rgba(6, 18, 38, 0.42) 55%, rgba(6, 18, 38, 0.7) 100%), url('A-picture-from-above-of-the-city-of-Alexandria-in-Egypt.jpg.jpeg');
+  background-size: 100% 100%, cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
 }
 
 .page-hero.page-hero-contact {
-  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('qaitebai-castel-alexandria-egypt-1.jpg.jpeg');
+  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.15) 0%, rgba(6, 18, 38, 0.42) 55%, rgba(6, 18, 38, 0.7) 100%), url('qaitebai-castel-alexandria-egypt-1.jpg.jpeg');
+  background-size: 100% 100%, cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
 }
 
 .page-hero::after {
@@ -497,8 +507,8 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 540px;
-  background: linear-gradient(180deg, rgba(6, 18, 38, 0) 0%, rgba(6, 18, 38, 0.1) 16%, rgba(6, 18, 38, 0.22) 30%, rgba(6, 18, 38, 0.38) 44%, rgba(6, 18, 38, 0.55) 58%, rgba(6, 18, 38, 0.7) 70%, rgba(6, 18, 38, 0.82) 80%, rgba(6, 18, 38, 0.91) 88%, rgba(6, 18, 38, 0.97) 95%, #061226 100%);
+  height: 420px;
+  background: linear-gradient(180deg, rgba(6, 18, 38, 0) 0%, rgba(6, 18, 38, 0.06) 18%, rgba(6, 18, 38, 0.16) 34%, rgba(6, 18, 38, 0.3) 50%, rgba(6, 18, 38, 0.46) 64%, rgba(6, 18, 38, 0.62) 78%, rgba(6, 18, 38, 0.76) 88%, rgba(6, 18, 38, 0.88) 95%, #061226 100%);
   z-index: 1;
 }
 
@@ -1217,20 +1227,21 @@ img {
 }
 
 .contact-photo {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   margin: 0 auto 14px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.08);
-  background-size: cover;
+  background: rgba(255, 255, 255, 0.06);
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.24);
+  box-shadow: 0 12px 24px rgba(2, 8, 18, 0.35);
 }
 
 .contact-photo.small {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 14px;
   margin: 0 auto 12px;
 }
@@ -1288,15 +1299,15 @@ img {
   }
 
   .contact-photo {
-    width: 96px;
-    height: 96px;
+    width: 130px;
+    height: 130px;
     margin: 0 auto 12px;
     border-radius: 14px;
   }
 
   .contact-photo.small {
-    width: 80px;
-    height: 80px;
+    width: 110px;
+    height: 110px;
     border-radius: 12px;
     margin: 0 auto 10px;
   }
