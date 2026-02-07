@@ -449,7 +449,7 @@ img {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.72) 68%, rgba(6, 18, 38, 0.92) 100%), url('stanley.png');
+  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.72) 68%, rgba(6, 18, 38, 0.92) 100%), url('Stanly-Bridge-Alexandria-Egypt-Tours-Portal.jpg');
   background-size: cover;
   background-position: center;
   transform: scale(1.05);
@@ -472,11 +472,23 @@ img {
 .page-hero {
   position: relative;
   padding: 160px 0 140px;
-  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('stanley.png');
+  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('Alexandria-Corniche-alexandria.jpg');
   background-size: cover;
   background-position: center 20%;
   min-height: 60vh;
   overflow: hidden;
+}
+
+.page-hero.page-hero-why {
+  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('Alexandria-Corniche-alexandria.jpg');
+}
+
+.page-hero.page-hero-stories {
+  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('A-picture-from-above-of-the-city-of-Alexandria-in-Egypt.jpg');
+}
+
+.page-hero.page-hero-contact {
+  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('qaitebai-castel-alexandria-egypt-1.jpg');
 }
 
 .page-hero::after {
@@ -506,15 +518,17 @@ img {
 }
 
 .hero-title {
-  font-size: clamp(3rem, 6vw, 5.4rem);
-  margin-bottom: 16px;
+  font-size: clamp(3.4rem, 7vw, 6.2rem);
+  margin-bottom: 8px;
+  line-height: 1.05;
   text-shadow: 0 12px 26px rgba(2, 6, 14, 0.65);
 }
 
 .hero-subtitle {
-  font-size: clamp(1.2rem, 2.4vw, 1.8rem);
+  font-size: clamp(1rem, 2vw, 1.5rem);
   color: var(--mist);
   margin-bottom: 0;
+  line-height: 1.25;
   text-shadow: 0 10px 22px rgba(2, 6, 14, 0.6);
 }
 
@@ -1192,6 +1206,7 @@ img {
   border-radius: 20px;
   padding: 18px;
   text-align: center;
+  max-width: 100%;
   box-shadow: 0 20px 40px rgba(2, 8, 18, 0.35);
 }
 
@@ -1238,10 +1253,67 @@ img {
   color: var(--mist);
   font-size: 0.95rem;
   line-height: 1.6;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .contact-meta a {
   color: var(--gold-400);
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .contact-hierarchy {
+    gap: 20px;
+  }
+
+  .contact-group {
+    gap: 14px;
+  }
+
+  .contact-team {
+    gap: 12px;
+  }
+
+  .contact-card {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .contact-card.contact-member {
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .contact-photo {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 12px;
+    border-radius: 14px;
+  }
+
+  .contact-photo.small {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    margin: 0 auto 10px;
+  }
+
+  .contact-role {
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+  }
+
+  .contact-name {
+    font-size: 0.95rem;
+  }
+
+  .contact-meta {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
 }
 
 @media (min-width: 900px) {
