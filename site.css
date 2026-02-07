@@ -449,7 +449,7 @@ img {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.72) 68%, rgba(6, 18, 38, 0.92) 100%), url('Stanly-Bridge-Alexandria-Egypt-Tours-Portal.jpg');
+  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.72) 68%, rgba(6, 18, 38, 0.92) 100%), url('Stanly-Bridge-Alexandria-Egypt-Tours-Portal.jpg.jpeg'), url('stanley.png');
   background-size: cover;
   background-position: center;
   transform: scale(1.05);
@@ -472,7 +472,7 @@ img {
 .page-hero {
   position: relative;
   padding: 160px 0 140px;
-  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('Alexandria-Corniche-alexandria.jpg');
+  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('Alexandria-Corniche-alexandria.jpg.jpeg'), url('stanley.png');
   background-size: cover;
   background-position: center 20%;
   min-height: 60vh;
@@ -480,15 +480,15 @@ img {
 }
 
 .page-hero.page-hero-why {
-  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('Alexandria-Corniche-alexandria.jpg');
+  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('Alexandria-Corniche-alexandria.jpg.jpeg'), url('stanley.png');
 }
 
 .page-hero.page-hero-stories {
-  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('A-picture-from-above-of-the-city-of-Alexandria-in-Egypt.jpg');
+  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('A-picture-from-above-of-the-city-of-Alexandria-in-Egypt.jpg.jpeg');
 }
 
 .page-hero.page-hero-contact {
-  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('qaitebai-castel-alexandria-egypt-1.jpg');
+  background-image: linear-gradient(180deg, rgba(6, 18, 38, 0.25) 0%, rgba(6, 18, 38, 0.6) 45%, rgba(6, 18, 38, 0.85) 100%), url('qaitebai-castel-alexandria-egypt-1.jpg.jpeg');
 }
 
 .page-hero::after {
