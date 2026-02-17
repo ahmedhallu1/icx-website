@@ -1,8 +1,8 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/eps-stories", "destination": "/stories.html" },
-    { "source": "/contact-us", "destination": "/contact.html" }
+  "redirects": [
+    { "source": "/stories", "destination": "/eps-stories", "permanent": true },
+    { "source": "/contact", "destination": "/contact-us", "permanent": true }
   ]
 }
