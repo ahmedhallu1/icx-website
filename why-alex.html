@@ -64,9 +64,8 @@
     </div>
   </nav>
 
-  <header class="page-hero page-hero-why">
+  <header class="page-hero page-hero-why" style="--page-hero-image: url('sunqaitbay.webp');">
     <div class="container mx-auto px-6 text-center">
-      <img src="sunqaitbay.jpg" alt="Sunqaitbay Citadel" class="mx-auto rounded-xl shadow-lg mb-6 max-h-72 object-cover">
       <h1 class="font-bold">Why Alexandria?</h1>
       <p class="text-mist mt-4">A coastal city shaped by history, hospitality, and Mediterranean energy.</p>
     </div>
@@ -76,49 +75,49 @@
     <div class="container mx-auto px-6">
       <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
         <div class="surface-soft why-card reveal" data-reveal="left">
-          <div class="badge mb-4">01</div>
+          <span class="why-icon" aria-hidden="true">&#x1F4B0;</span>
           <h3 class="text-xl mb-2">Affordable living</h3>
           <p class="text-mist">Alexandria offers an accessible cost of living for participants.</p>
           <a href="https://www.numbeo.com/cost-of-living/in/Alexandria" target="_blank" rel="noopener" class="btn-ghost mt-4">View cost index</a>
         </div>
         <div class="surface-soft why-card reveal" data-reveal="right">
-          <div class="badge mb-4">02</div>
+          <span class="why-icon" aria-hidden="true">&#x1F30A;</span>
           <h3 class="text-xl mb-2">Calm city rhythm</h3>
           <p class="text-mist">A more relaxed pace compared with the capital keeps days balanced.</p>
           <a href="https://www.numbeo.com/traffic/in/Alexandria" target="_blank" rel="noopener" class="btn-ghost mt-4">View traffic data</a>
         </div>
         <div class="surface-soft why-card reveal" data-reveal="left">
-          <div class="badge mb-4">03</div>
+          <span class="why-icon" aria-hidden="true">&#x1F9ED;</span>
           <h3 class="text-xl mb-2">Easy to navigate</h3>
           <p class="text-mist">A grid-like layout makes it simple to find your way around.</p>
         </div>
         <div class="surface-soft why-card reveal" data-reveal="right">
-          <div class="badge mb-4">04</div>
+          <span class="why-icon" aria-hidden="true">&#x1F307;</span>
           <h3 class="text-xl mb-2">Mediterranean views</h3>
           <p class="text-mist">Sea breezes and waterfront sunsets shape daily life.</p>
         </div>
         <div class="surface-soft why-card reveal" data-reveal="left">
-          <div class="badge mb-4">05</div>
+          <span class="why-icon" aria-hidden="true">&#x1F37D;</span>
           <h3 class="text-xl mb-2">Remarkable food</h3>
           <p class="text-mist">Fresh seafood, traditional cafes, and local flavors everywhere.</p>
         </div>
         <div class="surface-soft why-card reveal" data-reveal="right">
-          <div class="badge mb-4">06</div>
+          <span class="why-icon" aria-hidden="true">&#x1F68B;</span>
           <h3 class="text-xl mb-2">Historic tram system</h3>
           <p class="text-mist">Iconic transport that connects neighborhoods and stories.</p>
         </div>
         <div class="surface-soft why-card reveal" data-reveal="left">
-          <div class="badge mb-4">07</div>
+          <span class="why-icon" aria-hidden="true">&#x1F3DB;</span>
           <h3 class="text-xl mb-2">Deep history</h3>
           <p class="text-mist">From ancient heritage to modern culture, history lives here.</p>
         </div>
         <div class="surface-soft why-card reveal" data-reveal="right">
-          <div class="badge mb-4">08</div>
+          <span class="why-icon" aria-hidden="true">&#x1F5FA;</span>
           <h3 class="text-xl mb-2">Compact and rich</h3>
           <p class="text-mist">A small footprint packed with diverse places to explore.</p>
         </div>
         <div class="surface-soft why-card reveal" data-reveal="left">
-          <div class="badge mb-4">09</div>
+          <span class="why-icon" aria-hidden="true">&#x1F91D;</span>
           <h3 class="text-xl mb-2">Welcoming community</h3>
           <p class="text-mist">Hospitality and warmth make newcomers feel at home fast.</p>
         </div>
@@ -126,32 +125,156 @@
     </div>
   </section>
 
+  <section id="alex-cuisine" class="section-tight reveal" data-reveal="up">
+    <div class="container mx-auto px-6">
+      <div class="surface cuisine-surface">
+        <div class="badge mb-4">Alex Cuisine</div>
+        <h2 class="section-title cuisine-title"><span class="text-gold">ALEX</span> CUISINE</h2>
+        <p class="section-subtitle">Taste Alexandria through iconic Egyptian dishes. Scroll through the cuisine strip to explore each one.</p>
+        <div id="cuisine-carousel" class="carousel cuisine-carousel mt-8"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="alex-activities" class="section-tight reveal" data-reveal="up">
+    <div class="container mx-auto px-6">
+      <div class="surface cuisine-surface">
+        <div class="badge mb-4">Activities &amp; Places to Visit</div>
+        <h2 class="section-title cuisine-title"><span class="text-gold">ALEX</span> ACTIVITIES &amp; PLACES TO VISIT</h2>
+        <p class="section-subtitle">Discover Alexandria's best places to visit and activities to do. Scroll through the strip to explore each highlight.</p>
+        <div id="activities-carousel" class="carousel cuisine-carousel mt-8"></div>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer mt-auto">
-    <div class="container mx-auto px-6 footer-grid md:grid-cols-3">
-      <div class="text-center md:text-left">
+    <div class="container mx-auto px-6 footer-grid footer-grid-custom">
+      <div class="text-center md:text-left footer-left">
         <h4 class="text-xl font-semibold text-gold">AIESEC in Alexandria</h4>
         <p class="text-mist">Developing Leadership since 1995.</p>
       </div>
-      <div class="text-center">
+      <div class="text-center footer-middle">
         <div class="social-links">
-          <a href="https://www.facebook.com/aiesecegypt" target="_blank" rel="noopener" aria-label="Facebook">
-            <img src="facebook.png" alt="Facebook">
-          </a>
-          <a href="https://www.instagram.com/aiesecinalexandria?igsh=NmtiN2VidXlpZzNp" target="_blank" rel="noopener" aria-label="Instagram">
+          <a href="https://www.instagram.com/icxinalexandria?igsh=ZGZlamhsaTM0amlz" target="_blank" rel="noopener" aria-label="Instagram">
             <img src="instagram.png" alt="Instagram">
           </a>
-          <a href="https://www.linkedin.com/company/aiesec-in-egypt1/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <img src="linkedin.png" alt="LinkedIn">
-          </a>
         </div>
+        <p class="text-mist footer-credit">Created by <a href="https://www.linkedin.com/in/ahmedhallul" target="_blank" rel="noopener" class="text-gold">Ahmed Hallul</a></p>
       </div>
-      <div class="text-center md:text-right">
-        <p class="text-mist">Created by: <a href="https://www.linkedin.com/in/ahmedhallul" target="_blank" rel="noopener" class="text-gold">Ahmed Hallul</a></p>
+      <div class="text-center md:text-right footer-right">
+        <img src="logo-iris.png" alt="IRIS logo" class="iris-logo">
+        <p class="text-mist">Directed by EB <span class="text-gold">IRIS</span></p>
       </div>
     </div>
   </footer>
 
   <script src="site.js"></script>
+  <script>
+    const CUISINE_ITEMS = [
+      { id: '1HFGs10NeFNUVUa011K-6GAycLry338mI', name: 'Basbousa' },
+      { id: '1qZ_eZwAWFJxQnnoP5DPIxVYozf5ieuRN', name: 'Egyptian Cactus Fruit' },
+      { id: '17dKNo_irX-N07ojRQpJBgI2Mvr_hdyGW', name: 'Falafel' },
+      { id: '1J3eElgDtEDC8U3RQOQBEC3hTEQvZDtZH', name: 'Fattah' },
+      { id: '1XM7QwPdYjpxj1SOeAIz-6VV_l6rikqp4', name: 'Feteer Meshaltet' },
+      { id: '1kChU0MOSNan5i1ltK9ezNX5gNjwgQRas', name: 'Foul' },
+      { id: '170ZtBdL5T27wCc9h1ErHKXZHc47DHUxU', name: 'Hawawshi' },
+      { id: '1d7yNrfCzweACdzURJ_7P6-QNYH-uMI9h', name: 'Kasa Juice' },
+      { id: '1z4OP01HvnI7f3MA-9tbY_B1xPel1NGgx', name: 'Kebda-Iskandarani' },
+      { id: '1ZYRYHDGxwQjzqEhnZeuvgeg79MYJNQXR', name: 'Macarona Bechamel' },
+      { id: '1mYlgyRzYzHbPCYYbAXYpy8Y287hH68Zd', name: 'Mahshi' },
+      { id: '1wtNWQ8TNPTWyuHtlh_wcQtPsCPNoD5vx', name: 'Mango Kunafa' },
+      { id: '18Nl7TnB7G06GiKxWOsjDJNhX8Llos_yo', name: 'Molokhia' },
+      { id: '1bOyx_Whivkz-3kYnW_DXfaMx6NYzXdof', name: 'Moussaka' },
+      { id: '1ZnhgaLza-2ftdAwcWOxxZIeSRRxiO3-P', name: "Om Ali (Ali's Mother)" },
+      { id: '13dEJGFkfnw6A0Bs8xHOR8GMRx_qi_Ovj', name: 'Red Tea' },
+      { id: '165Q4IOPS4GCOS6kRnsns3Gq67bKLvHi7', name: 'Renga Fish' },
+      { id: '1hiSYIzEMgwFHkV0t4SbdqmhveJ9ImSBH', name: 'Roqaq' },
+      { id: '1-40EAqSoUrqz8gM1SyolEevdQxbZoYJm', name: 'Zalabia' },
+      { id: '1flkP-0ZuwORf2XXUr9pu8-CIqtsSMEQG', name: 'Kushari' }
+    ];
+
+    const ACTIVITIES_ITEMS = [
+      { id: '1K4dSaeeGNhjDhZv6sleiLzuJCz6TkIao', name: 'Africano Park Alexandria Safari' },
+      { id: '13B3zQL3TWxCyv4n6lhqPfWgEnLKB9KDD', name: 'Al Max Light House' },
+      { id: '1eogEattvL2lS6cCyIEgpNL6zPk3kDTho', name: 'Alexandria Corniche' },
+      { id: '1tpXTO4u1f6BQFo2Pe5xlyIpmidP6-u2r', name: 'Alexandria National Museum' },
+      { id: '12ewDbLcw4ScK-3VfUQ8LgpKiNIPBs_OX', name: 'Alexandria Naval Unknown Soldier Memorial' },
+      { id: '1a8g5svAxuqwwbnZ41xmrjo_Aq_e3FOjF', name: 'Ali El Hendi Cafe' },
+      { id: '171baSYK6UTTwclQWkRM4bbylJ359sl0J', name: 'Antoniads' },
+      { id: '15MdzApkZev7VEgsg4Ui3agzVnBU6dip5', name: 'Bibliotheca Alexandrina' },
+      { id: '1gRNfERDyeGsxtBA7Nef2QRt2KHbXrbji', name: 'Boats Harbour' },
+      { id: '1wEIvIn41n8eXgc7mWuQhlmDggfDw7HxB', name: 'Catacombs' },
+      { id: '1fN1_ynWOZkNorF3MS4Jm9RoshZx0cBcg', name: 'Cavay Museum' },
+      { id: '1PfXR6Z6T40JV4GxtxO0CLqCrk4UjxgKU', name: 'Double Decker Bus by the Sea' },
+      { id: '1g7jqj016yd8rYyPtEkwiOIAD-LUKEmIR', name: 'El Lol Seafood' },
+      { id: '1SId9Kj-17h8S154azLZMCn3uzqCxF7_V', name: 'El Maamora Amusement Park' },
+      { id: '1a5M7G78CDJ8AXApWqdpCZad-qSG5NBPy', name: 'El Montazah Gardens' },
+      { id: '1lllt3M_T3rA2qncqH-jJmPV0O7sFRmjU', name: 'El Montazah Beach' },
+      { id: '1BXAQu1TWPGNNTy9Z_0N0phGAohMKA0IH', name: 'El Montazah Light House' },
+      { id: '1HJIYcc67d7iLaoQ_DL6dRiMxc0TgSpdi', name: 'El Montazah Palace' },
+      { id: '1J0BJhRyZ7LEzZxJv7RwQ985Y5CaiN4sR', name: 'El Mursi Abou El Abbas Mosque' },
+      { id: '1miN60QTFRiK137H_Ef3QKRGo_yORTGY5', name: 'El Nabi Daniel Street' },
+      { id: '1xrku_R9eowa40q5io5JaDmUOd78O21G_', name: 'Eliyahu Hanavi Synagogue' },
+      { id: '1SH1tiAd_A7_Zj3BeOj8ooWLRoutFbyQY', name: 'Fish Museum' },
+      { id: '1gJCqWSM-w4SZRAeFpztmE5fE8WaSSEKH', name: 'Florelle' },
+      { id: '1PKdgEtyoGbyy2nLz51BhvPDmeqUQCrTZ', name: 'Gleem Bay Food Court' },
+      { id: '1X0iS2xGSG3-USldGYefHeKTAPGfk60wC', name: 'Graeco-Roman Museum' },
+      { id: '1kFWKwqTOtIbvsury8xeQ-9cJKIvpO84D', name: 'Gravity Code' },
+      { id: '1YrSV2p115JLY8_C0_xcD134PvhWjhMUi', name: 'Greek Cemetery' },
+      { id: '1joPb6xVs-SphEOPFx4gaQkSh3cb3A4-x', name: 'Green Plaza' },
+      { id: '1Nfq3TUpzFp62y1wx_MEc4e1zwtofMhMh', name: 'Horse Riding by the Sea' },
+      { id: '1ySL3eADredey9Yvwd7FfcNdO0gFvTZpx', name: 'Kayaking by the Light House' },
+      { id: '1zvPxonHj51Y4Alxc7WQm_4EbGZ33KSU2', name: 'King Tea Palace' },
+      { id: '1g0CzCTWSjVe_YuBCNTaGfvNC3DERwY3B', name: 'Mansheya' },
+      { id: '1BjzUTP_utdULIO9Ob8PdyUdKhYd_qv77', name: 'Museum of Fine Arts' },
+      { id: '1KxJyP68NG5zHXIiORCmt7pDuM1efgM7Q', name: 'Opera House' },
+      { id: '1UiF9yxV7crzze7kz_ayZO19m2_BNOYG6', name: 'Planetarium Science Center' },
+      { id: '1-lT6uHiK5ZXbS3DyXt4kovm-1_YvLUfs', name: 'Point 6' },
+      { id: '1tUD3VoVCXlwi9VdqQQAKgTMLxozoqB_-', name: 'Pompey\'s Pillar' },
+      { id: '1E4VKoj6s-DB2Eg3RfS2yesF1VKIaNra4', name: 'Pottery in a Greenhouse' },
+      { id: '1yJBikmOAcV--YAN6sZNvqMCMYmHOp0IZ', name: 'Quitbay Citadel' },
+      { id: '1C9scSsso7HjGRuYVJDRBsgZ_LRsFwoxx', name: 'Ras El-Tin Palace' },
+      { id: '1GTtXE6HeIJFGxkJpZ-Uqwk-mliNISs7-', name: 'Roman Theater' },
+      { id: '1fKUQSS72gQHmuIkvpZU7OpmmAA9qOp1w', name: 'Roots Greenhouse' },
+      { id: '1SJJgXGlnDU06FUKsqUeMNU5mp_nd_i4U', name: 'Saint Mark\'s Coptic Orthodox Cathedral' },
+      { id: '1BOQaAUvMzrtA-XtvnUCA1E66uzyBhktT', name: 'San Stefano' },
+      { id: '1CECs_53LMGJ99z8nmKcKlC0UpmZH40N1', name: 'Sound and Light Show' },
+      { id: '1Im7gPEU5GAFztlNuzbLf_ZVjInRtcORc', name: 'Stanley Beach' },
+      { id: '1rBELRpjBGyVcmByRpJOqcZQaBk8rFi_a', name: 'Stanley Bridge' },
+      { id: '19HJLN7_IsW_55lqSqAYaV3ZIy5aG-syc', name: 'Sunken Island' },
+      { id: '1Kn4DrkvmEVGK8jbo--ojN8Zk0CpjAybE', name: 'The Royal Jewelry Museum' },
+      { id: '1TKSmAX7uqFciRRCPY_FjbF9i3PYVhkm3', name: 'The Walk Food Court' },
+      { id: '15YOA6fdsHFI8fEL4Qp-aZi_AGyJEvSp-', name: 'Zanet El Setat' }
+    ];
+
+    function setupCarouselWheel(container) {
+      if (!container) return;
+      container.addEventListener('wheel', (event) => {
+        if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+        event.preventDefault();
+        container.scrollLeft += event.deltaY;
+      }, { passive: false });
+    }
+
+    function renderCarousel(items, targetId) {
+      const carousel = document.getElementById(targetId);
+      if (!carousel) return;
+
+      carousel.innerHTML = items.map((item) => {
+        const thumb = `https://drive.google.com/thumbnail?id=${item.id}&sz=w1200`;
+        const link = `https://drive.google.com/file/d/${item.id}/view`;
+        return `
+          <a class="carousel-item cuisine-card" href="${link}" target="_blank" rel="noopener">
+            <img src="${thumb}" alt="${item.name}" loading="lazy">
+            <span class="cuisine-name">${item.name}</span>
+          </a>`;
+      }).join('');
+
+      setupCarouselWheel(carousel);
+    }
+
+    renderCarousel(CUISINE_ITEMS, 'cuisine-carousel');
+    renderCarousel(ACTIVITIES_ITEMS, 'activities-carousel');
+  </script>
 </body>
 </html>
-

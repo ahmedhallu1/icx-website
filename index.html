@@ -77,12 +77,19 @@
     <div class="container mx-auto px-6">
       <div class="surface safety-panel">
         <div class="safety-content">
-          <div class="badge">2025 Safety Index</div>
-          <h2 class="section-title">The safest city in Africa</h2>
-          <p class="section-subtitle">Alexandria leads 2025 safety index for African cities. Recognized for its secure, welcoming environment for residents and international participants.</p>
+          <div class="badge">Safety Index</div>
+          <h2 class="section-title safety-headline">
+            <span class="safety-highlight">ALEXANDRIA</span> RANKS FIRST
+            AMONG AFRICA'S TOP 10 CITIES FOR
+            <span class="safety-highlight">QUALITY OF LIFE IN 2026</span>
+          </h2>
+          <p class="section-subtitle">Alexandria is recognized for safety, quality infrastructure, and daily livability for residents and international participants.</p>
+          <div class="safety-link">
+            <a class="btn-ghost" href="https://thepeninsulaqatar.com/article/20/01/2026/alexandria-leads-2025-safety-index-for-african-cities" target="_blank" rel="noopener">Read the source</a>
+          </div>
         </div>
-        <div class="safety-link">
-          <a class="btn-ghost" href="https://thepeninsulaqatar.com/article/20/01/2026/alexandria-leads-2025-safety-index-for-african-cities" target="_blank" rel="noopener">Read the source</a>
+        <div class="safety-visual">
+          <img src="safestCityimage.jpeg" alt="Alexandria ranks first among Africa's top 10 cities for quality of life in 2026">
         </div>
       </div>
     </div>
@@ -214,33 +221,30 @@
   </section>
 
   <footer class="footer mt-auto">
-    <div class="container mx-auto px-6 footer-grid md:grid-cols-3">
-      <div class="text-center md:text-left">
+    <div class="container mx-auto px-6 footer-grid footer-grid-custom">
+      <div class="text-center md:text-left footer-left">
         <h4 class="text-xl font-semibold text-gold">AIESEC in Alexandria</h4>
         <p class="text-mist">Developing Leadership since 1995.</p>
       </div>
-      <div class="text-center">
+      <div class="text-center footer-middle">
         <div class="social-links">
-          <a href="https://www.facebook.com/aiesecegypt" target="_blank" rel="noopener" aria-label="Facebook">
-            <img src="facebook.png" alt="Facebook">
-          </a>
-          <a href="https://www.instagram.com/aiesecinalexandria?igsh=NmtiN2VidXlpZzNp" target="_blank" rel="noopener" aria-label="Instagram">
+          <a href="https://www.instagram.com/icxinalexandria?igsh=ZGZlamhsaTM0amlz" target="_blank" rel="noopener" aria-label="Instagram">
             <img src="instagram.png" alt="Instagram">
           </a>
-          <a href="https://www.linkedin.com/company/aiesec-in-egypt1/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <img src="linkedin.png" alt="LinkedIn">
-          </a>
         </div>
+        <p class="text-mist footer-credit">Created by <a href="https://www.linkedin.com/in/ahmedhallul" target="_blank" rel="noopener" class="text-gold">Ahmed Hallul</a></p>
       </div>
-      <div class="text-center md:text-right">
-        <p class="text-mist">Created by: <a href="https://www.linkedin.com/in/ahmedhallul" target="_blank" rel="noopener" class="text-gold">Ahmed Hallul</a></p>
+      <div class="text-center md:text-right footer-right">
+        <img src="logo-iris.png" alt="IRIS logo" class="iris-logo">
+        <p class="text-mist">Directed by EB <span class="text-gold">IRIS</span></p>
       </div>
     </div>
   </footer>
 
   <script src="site.js"></script>
   <script>
-    const N8N_OPPS_URL = 'https://n8n.srv1235027.hstgr.cloud/webhook/opportunities';
+    const GOOGLE_SHEET_ID = '1NJWKslbv7ZinFvJbe-c1DE24foFcJiCRncfNK-Lrm1Q';
+    const GOOGLE_SHEET_TAB = 'master';
     const LOCAL_VISA_JSON = 'visa-data.json';
 
     const CATEGORY_META = {
@@ -263,6 +267,69 @@
 
     let currentData = [];
     let currentCategory = '';
+
+    const escapeHTML = (value) => {
+      return String(value == null ? '' : value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    };
+
+    const normalizeText = (value) => String(value == null ? '' : value).trim();
+
+    function getCellValue(cell) {
+      if (!cell) return '';
+      if (typeof cell.f === 'string' && cell.f.trim()) return cell.f.trim();
+      if (cell.v == null) return '';
+      return String(cell.v).trim();
+    }
+
+    async function fetchOpportunitiesFromSheet() {
+      return new Promise((resolve, reject) => {
+        const callbackName = `sheetCallback_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
+        const timeoutId = setTimeout(() => {
+          cleanup();
+          reject(new Error('Google Sheet request timed out'));
+        }, 15000);
+
+        const cleanup = () => {
+          clearTimeout(timeoutId);
+          if (script.parentNode) script.parentNode.removeChild(script);
+          delete window[callbackName];
+        };
+
+        window[callbackName] = (payload) => {
+          try {
+            const columns = (payload.table?.cols || []).map((col) => normalizeText(col.label));
+            const rows = payload.table?.rows || [];
+            const mapped = rows.map((row) => {
+              const item = {};
+              columns.forEach((column, index) => {
+                item[column] = getCellValue(row.c?.[index]);
+              });
+              return item;
+            });
+            cleanup();
+            resolve(mapped);
+          } catch (error) {
+            cleanup();
+            reject(error);
+          }
+        };
+
+        const script = document.createElement('script');
+        script.src = `https://docs.google.com/spreadsheets/d/${GOOGLE_SHEET_ID}/gviz/tq?sheet=${encodeURIComponent(GOOGLE_SHEET_TAB)}&tqx=out:json;responseHandler:${callbackName}`;
+        script.async = true;
+        script.onerror = () => {
+          cleanup();
+          reject(new Error('Failed to load Google Sheet script'));
+        };
+
+        document.body.appendChild(script);
+      });
+    }
 
     document.addEventListener('DOMContentLoaded', () => {
       const params = new URLSearchParams(window.location.search);
@@ -523,6 +590,65 @@
       });
     }
 
+    function getOpportunityCategory(idValue) {
+      const id = normalizeText(idValue).toUpperCase();
+      if (id.startsWith('TA')) return 'Global Talent';
+      if (id.startsWith('TE') || id.startsWith('T')) return 'Global Teacher';
+      if (id.startsWith('V')) return 'Global Volunteer';
+      return '';
+    }
+
+    function setSelectOptions(selectEl, baseLabel, options) {
+      if (!selectEl) return;
+      selectEl.innerHTML = '';
+      const defaultOption = document.createElement('option');
+      defaultOption.value = 'all';
+      defaultOption.textContent = baseLabel;
+      selectEl.appendChild(defaultOption);
+
+      options.forEach((optionValue) => {
+        const option = document.createElement('option');
+        option.value = optionValue;
+        option.textContent = optionValue;
+        selectEl.appendChild(option);
+      });
+    }
+
+    function formatSalary(value) {
+      if (!value && value !== 0) return '';
+      const numeric = parseFloat(String(value).replace(/[^0-9.]/g, ''));
+      if (Number.isNaN(numeric)) return '';
+      return `${numeric.toLocaleString('en-US')} EGP`;
+    }
+
+    function buildInfoRows(opp, category) {
+      const rows = [];
+      const company = normalizeText(opp.company);
+      const duration = normalizeText(opp.duration);
+      const startDate = normalizeText(opp.startDate);
+      const openings = normalizeText(opp.openings);
+      const accommodation = normalizeText(opp.accommodation);
+      const meals = normalizeText(opp.meals);
+      const transportation = normalizeText(opp.transportation);
+      const salary = formatSalary(opp.salary);
+
+      if (company) rows.push(`<p><span class="field-label">Company:</span> <em>${escapeHTML(company)}</em></p>`);
+      if (duration) rows.push(`<p><span class="field-label">Duration:</span> ${escapeHTML(duration)}</p>`);
+      if (startDate) rows.push(`<p><span class="field-label">Start Date:</span> ${escapeHTML(startDate)}</p>`);
+      if (salary) {
+        rows.push(`
+          <p><span class="field-label">Salary:</span>
+            <a href="https://www.numbeo.com/cost-of-living/in/Alexandria" target="_blank" rel="noopener" class="text-gold font-semibold">${escapeHTML(salary)}</a>
+          </p>`);
+      }
+      if (openings) rows.push(`<p><span class="field-label">Openings:</span> ${escapeHTML(openings)}</p>`);
+      if (category !== 'Global Volunteer' && accommodation) rows.push(`<p><span class="field-label">Accommodation:</span> ${escapeHTML(accommodation)}</p>`);
+      if (meals) rows.push(`<p><span class="field-label">Meals:</span> ${escapeHTML(meals)}</p>`);
+      if (transportation) rows.push(`<p><span class="field-label">Transportation:</span> ${escapeHTML(transportation)}</p>`);
+
+      return rows.join('');
+    }
+
     async function filterOpportunities(category) {
       currentCategory = category;
       const listings = document.getElementById('listings');
@@ -536,8 +662,8 @@
 
       title.innerHTML = `
         <span class="inline-flex items-center gap-3">
-          ${meta.icon ? `<img src="${meta.icon}" alt="${category} logo" class="h-8 w-8">` : ''}
-          <span>${meta.title}</span>
+          ${meta.icon ? `<img src="${meta.icon}" alt="${escapeHTML(category)} logo" class="h-8 w-8">` : ''}
+          <span>${escapeHTML(meta.title)}</span>
         </span>`;
 
       container.innerHTML = `
@@ -546,150 +672,120 @@
           <div class="text-mist">Loading opportunities...</div>
         </div>`;
 
-      // Scroll to listings section with a slight delay to ensure rendering
       setTimeout(() => {
         listings.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 50);
 
       try {
-        const response = await fetch(N8N_OPPS_URL, { method: 'GET' });
-        if (!response.ok) throw new Error('Server Error');
-        let allData = await response.json();
-        if (!Array.isArray(allData)) allData = [allData];
-
-        currentData = allData.filter((opp) => {
-          const id = (opp.id || '').toUpperCase();
-          let itemCat = '';
-
-          if (id.startsWith('TA')) itemCat = 'Global Talent';
-          else if (id.startsWith('T')) itemCat = 'Global Teacher';
-          else if (id.startsWith('V')) itemCat = 'Global Volunteer';
-
-          return itemCat === category;
-        });
-
+        const allData = await fetchOpportunitiesFromSheet();
+        currentData = allData.filter((opp) => getOpportunityCategory(opp.id) === category);
         setupFilters();
         applyFilters();
       } catch (error) {
-        container.innerHTML = '<div class="col-span-3 text-red-300 text-center">Connection Error</div>';
+        container.innerHTML = `<div class="col-span-3 text-red-300 text-center">Connection Error: ${escapeHTML(error.message || 'Unable to load data')}</div>`;
       }
     }
 
     function setupFilters() {
       const dynamicFilter = document.getElementById('filter-dynamic');
-      const durFilter = document.getElementById('filter-duration');
+      const durationFilter = document.getElementById('filter-duration');
       const filterArea = document.getElementById('filters-area');
 
-      const durations = [...new Set(currentData.map((i) => i.duration).filter((x) => x))];
+      const durations = [...new Set(currentData.map((item) => normalizeText(item.duration)).filter(Boolean))];
+      setSelectOptions(durationFilter, 'All Durations', durations);
 
-      durFilter.innerHTML = '<option value="all">All Durations</option>';
-      durations.forEach((d) => durFilter.innerHTML += `<option value="${d}">${d}</option>`);
-
-      let options = [];
-      let label = 'All';
+      let dynamicOptions = [];
+      let dynamicLabel = 'All';
       let useDynamic = false;
 
       if (currentCategory.includes('Talent')) {
-        options = [...new Set(currentData.map((i) => i.subProduct).filter((x) => x))];
-        label = 'All Sub-Products';
+        dynamicOptions = [...new Set(currentData.map((item) => normalizeText(item.subProduct)).filter(Boolean))];
+        dynamicLabel = 'All Sub-Products';
         useDynamic = true;
       } else if (currentCategory.includes('Teacher')) {
-        options = [...new Set(currentData.map((i) => i.subProduct).filter((x) => x))];
-        label = 'All Languages';
+        dynamicOptions = [...new Set(currentData.map((item) => normalizeText(item.subProduct)).filter(Boolean))];
+        dynamicLabel = 'All Languages';
         useDynamic = true;
       } else if (currentCategory.includes('Volunteer')) {
-        options = [...new Set(currentData.map((i) => i.position).filter((x) => x))];
-        label = 'All Projects';
+        dynamicOptions = [...new Set(currentData.map((item) => normalizeText(item.position)).filter(Boolean))];
+        dynamicLabel = 'All Projects';
         useDynamic = true;
       }
 
-      dynamicFilter.innerHTML = `<option value="all">${label}</option>`;
-      options.forEach((o) => dynamicFilter.innerHTML += `<option value="${o}">${o}</option>`);
+      setSelectOptions(dynamicFilter, dynamicLabel, dynamicOptions);
 
       filterArea.classList.remove('hidden');
       if (useDynamic) dynamicFilter.classList.remove('hidden');
       else dynamicFilter.classList.add('hidden');
     }
 
-    function formatSalary(s) {
-      if (!s && s !== 0) return '';
-      const num = parseFloat(String(s).replace(/[^0-9.]/g, ''));
-      if (isNaN(num)) return s;
-      return num.toLocaleString('en-US') + ' EGP';
-    }
-
     function applyFilters() {
       const container = document.getElementById('cards-container');
-      const dynVal = document.getElementById('filter-dynamic').value;
-      const durVal = document.getElementById('filter-duration').value;
+      const dynamicValue = document.getElementById('filter-dynamic').value;
+      const durationValue = document.getElementById('filter-duration').value;
 
       const filtered = currentData.filter((item) => {
-        if (dynVal !== 'all') {
-          if (currentCategory.includes('Talent') && item.subProduct !== dynVal) return false;
-          if (currentCategory.includes('Teacher') && item.subProduct !== dynVal) return false;
-          if (currentCategory.includes('Volunteer') && item.position !== dynVal) return false;
+        const itemSubProduct = normalizeText(item.subProduct);
+        const itemPosition = normalizeText(item.position);
+        const itemDuration = normalizeText(item.duration);
+
+        if (dynamicValue !== 'all') {
+          if (currentCategory.includes('Talent') && itemSubProduct !== dynamicValue) return false;
+          if (currentCategory.includes('Teacher') && itemSubProduct !== dynamicValue) return false;
+          if (currentCategory.includes('Volunteer') && itemPosition !== dynamicValue) return false;
         }
-        if (durVal !== 'all' && item.duration !== durVal) return false;
+
+        if (durationValue !== 'all' && itemDuration !== durationValue) return false;
         return true;
       });
 
-      container.innerHTML = '';
       if (filtered.length === 0) {
         container.innerHTML = '<p class="col-span-3 text-center text-mist">No results match.</p>';
         return;
       }
 
-      filtered.forEach((opp) => {
-        let cardContent = '';
-        let accent = 'var(--gold-400)';
-        const id = (opp.id || '').toUpperCase();
+      const cardsHTML = filtered.map((opp) => {
+        const category = getOpportunityCategory(opp.id);
+        const meta = CATEGORY_META[category] || {};
+        const accent = meta.accent || 'var(--gold-400)';
+        const position = normalizeText(opp.position) || 'Untitled opportunity';
+        const subProduct = normalizeText(opp.subProduct);
+        const state = normalizeText(opp.state).toLowerCase();
+        const isUnderReview = state === 'under review';
+        const isOpen = state === 'open';
+        const detailsLink = normalizeText(opp.link);
+        const bookletLink = normalizeText(opp.booklet);
 
-        if (id.startsWith('TA')) {
-          accent = 'var(--talent)';
-          cardContent = `
-            <h4 class="text-lg font-semibold text-ink">${opp.position}</h4>
-            <span class="accent-chip">${opp.subProduct}</span>
-            <div class="text-sm text-mist space-y-1">
-              <p><strong>Company:</strong> ${opp.company}</p>
-              <p><strong>Duration:</strong> ${opp.duration}</p>
-              <p><strong>Start Date:</strong> ${opp.startDate}</p>
-              <p><strong>Salary:</strong>
-                <a href="https://www.numbeo.com/cost-of-living/in/Alexandria" target="_blank" rel="noopener" class="text-gold font-semibold">${formatSalary(opp.salary)}</a>
-              </p>
-              <p><strong>Openings:</strong> ${opp.openings}</p>
-            </div>`;
-        } else if (id.startsWith('V')) {
-          accent = 'var(--volunteer)';
-          cardContent = `
-            <h4 class="text-lg font-semibold text-ink">${opp.position}</h4>
-            <div class="text-sm text-mist space-y-1">
-              <p><strong>Company:</strong> ${opp.company}</p>
-              <p><strong>Duration:</strong> ${opp.duration}</p>
-              <p><strong>Openings:</strong> ${opp.openings}</p>
-            </div>`;
-        } else if (id.startsWith('T')) {
-          accent = 'var(--teacher)';
-          cardContent = `
-            <h4 class="text-lg font-semibold text-ink">${opp.position}</h4>
-            <span class="accent-chip">${opp.subProduct}</span>
-            <div class="text-sm text-mist space-y-1">
-              <p><strong>Company:</strong> ${opp.company}</p>
-              <p><strong>Duration:</strong> ${opp.duration}</p>
-              <p><strong>Start Date:</strong> ${opp.startDate}</p>
-              <p><strong>Salary:</strong>
-                <a href="https://www.numbeo.com/cost-of-living/in/Alexandria" target="_blank" rel="noopener" class="text-gold font-semibold">${formatSalary(opp.salary)}</a>
-              </p>
-              <p><strong>Openings:</strong> ${opp.openings}</p>
-            </div>`;
+        const infoRows = buildInfoRows(opp, category);
+        const statusBadge = isUnderReview
+          ? '<span class="status-badge under-review">Under Review</span>'
+          : (isOpen ? '<span class="status-badge open">Open</span>' : '');
+
+        const actionButtons = [];
+        if (isOpen && detailsLink) {
+          actionButtons.push(`<a href="${escapeHTML(detailsLink)}" target="_blank" rel="noopener" class="accent-btn">Details</a>`);
+        }
+        if (bookletLink) {
+          actionButtons.push(`<a href="${escapeHTML(bookletLink)}" target="_blank" rel="noopener" class="accent-btn accent-btn-secondary">Booklet</a>`);
         }
 
-        const card = `
+        return `
           <div class="listing-card" style="--accent: ${accent};">
-            <div class="space-y-3">${cardContent}</div>
-            <a href="${opp.link}" target="_blank" rel="noopener" class="accent-btn">Details</a>
+            <div class="space-y-3">
+              <div class="listing-card-top">
+                <h4 class="text-lg font-semibold text-ink">${escapeHTML(position)}</h4>
+                ${statusBadge}
+              </div>
+              ${subProduct ? `<span class="accent-chip">${escapeHTML(subProduct)}</span>` : ''}
+              <div class="text-sm text-mist space-y-1">
+                ${infoRows}
+              </div>
+            </div>
+            ${actionButtons.length ? `<div class="card-actions">${actionButtons.join('')}</div>` : ''}
           </div>`;
-        container.innerHTML += card;
-      });
+      }).join('');
+
+      container.innerHTML = cardsHTML;
     }
   </script>
 </body>

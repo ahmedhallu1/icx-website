@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -64,15 +64,50 @@
     </div>
   </nav>
 
-  <header class="page-hero page-hero-stories">
+  <header class="page-hero page-hero-stories" style="--page-hero-image: url('Catacombs-of-Kom-El-Shoqafa-in-Alexandria-Egypt-Tours-Portal.jpg.jpeg');">
     <div class="container mx-auto px-6 text-center">
-      <img src="Catacombs-of-Kom-El-Shoqafa-in-Alexandria-Egypt-Tours-Portal.jpg" alt="Catacombs of Kom El Shoqafa" class="mx-auto rounded-xl shadow-lg mb-6 max-h-72 object-cover">
       <h1 class="font-bold">EPs Stories</h1>
       <p class="text-mist mt-4">Real experiences from people who lived the journey.</p>
     </div>
   </header>
 
   <section class="section reveal" data-reveal="up">
+    <div class="container mx-auto px-6">
+      <div class="surface featured-stories">
+        <div class="badge mb-4">Featured EPs</div>
+        <h2 class="section-title">Two Stories That Carry the ICX Spirit</h2>
+        <p class="section-subtitle">From Tunisia to Turkey, these two journeys capture growth, impact, and what it feels like to live Alexandria as an EP.</p>
+        <div class="featured-video-grid featured-video-grid-portrait mt-10">
+          <article class="featured-video-card">
+            <button class="featured-thumb" type="button" onclick="openVideoModal('1hnnvb5nMg_r6TLkrj6vH3mXLJbyA4b3A', 'Zeineb - Tunisia')">
+              <div class="featured-portrait-frame">
+                <img src="https://drive.google.com/thumbnail?id=1hnnvb5nMg_r6TLkrj6vH3mXLJbyA4b3A&sz=w720-h1280" alt="Zeineb story thumbnail" loading="lazy">
+              </div>
+              <span class="featured-play" aria-hidden="true">&#9654;</span>
+            </button>
+            <div class="featured-video-meta">
+              <h3>Zeineb</h3>
+              <p class="featured-country">Tunisia</p>
+            </div>
+          </article>
+          <article class="featured-video-card">
+            <button class="featured-thumb" type="button" onclick="openVideoModal('1R1VSTtCUBYNRs-aZmBY6FI4lY62ADexy', 'Omer - Turkey')">
+              <div class="featured-portrait-frame">
+                <img src="https://drive.google.com/thumbnail?id=1R1VSTtCUBYNRs-aZmBY6FI4lY62ADexy&sz=w720-h1280" alt="Omer story thumbnail" loading="lazy">
+              </div>
+              <span class="featured-play" aria-hidden="true">&#9654;</span>
+            </button>
+            <div class="featured-video-meta">
+              <h3>Omer</h3>
+              <p class="featured-country">Turkey</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" data-reveal="left">
     <div class="container mx-auto px-6">
       <div class="surface">
         <div class="badge mb-4">Images</div>
@@ -84,7 +119,7 @@
     </div>
   </section>
 
-  <section class="section-tight reveal" data-reveal="left">
+  <section class="section-tight reveal" data-reveal="right">
     <div class="container mx-auto px-6">
       <div class="surface">
         <div class="badge mb-4">Videos</div>
@@ -97,26 +132,22 @@
   </section>
 
   <footer class="footer mt-auto">
-    <div class="container mx-auto px-6 footer-grid md:grid-cols-3">
-      <div class="text-center md:text-left">
+    <div class="container mx-auto px-6 footer-grid footer-grid-custom">
+      <div class="text-center md:text-left footer-left">
         <h4 class="text-xl font-semibold text-gold">AIESEC in Alexandria</h4>
         <p class="text-mist">Developing Leadership since 1995.</p>
       </div>
-      <div class="text-center">
+      <div class="text-center footer-middle">
         <div class="social-links">
-          <a href="https://www.facebook.com/aiesecegypt" target="_blank" rel="noopener" aria-label="Facebook">
-            <img src="facebook.png" alt="Facebook">
-          </a>
-          <a href="https://www.instagram.com/aiesecinalexandria?igsh=NmtiN2VidXlpZzNp" target="_blank" rel="noopener" aria-label="Instagram">
+          <a href="https://www.instagram.com/icxinalexandria?igsh=ZGZlamhsaTM0amlz" target="_blank" rel="noopener" aria-label="Instagram">
             <img src="instagram.png" alt="Instagram">
           </a>
-          <a href="https://www.linkedin.com/company/aiesec-in-egypt1/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <img src="linkedin.png" alt="LinkedIn">
-          </a>
         </div>
+        <p class="text-mist footer-credit">Created by <a href="https://www.linkedin.com/in/ahmedhallul" target="_blank" rel="noopener" class="text-gold">Ahmed Hallul</a></p>
       </div>
-      <div class="text-center md:text-right">
-        <p class="text-mist">Created by: <a href="https://www.linkedin.com/in/ahmedhallul" target="_blank" rel="noopener" class="text-gold">Ahmed Hallul</a></p>
+      <div class="text-center md:text-right footer-right">
+        <img src="logo-iris.png" alt="IRIS logo" class="iris-logo">
+        <p class="text-mist">Directed by EB <span class="text-gold">IRIS</span></p>
       </div>
     </div>
   </footer>
@@ -126,9 +157,78 @@
     <img id="lightbox-image" src="" class="max-h-[90vh] max-w-[90vw] rounded-2xl shadow-2xl object-contain border border-white/20" alt="Enlarged view">
   </div>
 
+  <div id="video-modal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4" onclick="closeVideoModal(event)">
+    <div class="video-modal-card">
+      <button class="video-modal-close" type="button" onclick="closeVideoModal(event)" aria-label="Close video">&times;</button>
+      <div class="video-frame" id="video-modal-frame-wrap">
+        <iframe id="video-modal-frame" src="" allow="autoplay" loading="lazy" title="Featured EP video"></iframe>
+      </div>
+    </div>
+  </div>
+
   <script src="site.js"></script>
   <script>
-    const API_URL = 'https://n8n.srv1235027.hstgr.cloud/webhook/stories';
+    const PHOTO_ITEMS = [
+      '1np9sOmfZQWLS2MWWlv2Dj9jmHxyF5a7I',
+      '1mFRd6zqaKtJUjnRRy8Q4vtGSneYgqCC1',
+      '1o8OsmGQ84Yhug12HCI_mVKXh9I4CsE77',
+      '1p0cEmwpn6ZGGQULD7uJGXmt3-lkEFaTJ',
+      '1zon26q8Qc__ZA6VG6sSmthY1ScEwnn4L',
+      '1HGh2L-vASFmtEp6Wh6LAroFn39T0viST',
+      '1OQgMZaANOfmpkzzHXthCYjn-1fs757KC',
+      '1JPM_ucJeraJXCKMa5gWg8A8pZv_E3YdD',
+      '1nOORysK162aF8CV42a8y4tbRbzvsdSJH',
+      '1NxP8lBNY2aRKEIn2cIAbcyM5V8PmJTDQ',
+      '1AkLW7_8k90ZSteZogT9fC2MHKhJvy00W',
+      '1VN0786eXFdGGwTRRU16FLeUY6pTwPUIW',
+      '1PvY_E3Fh-vauZa7_4S7K6WXVeAha9ezo',
+      '10PmQT_E2C0Q_1_HaY82fr2Oe1rvz8PfQ',
+      '1dK4gONhT7SmOGQDnCIYRZ2xpd80rYdIs',
+      '1-3lD6z-ECAT-FcQKp4VEM90CEMNt-ttz',
+      '11VDPC9AXFWhlxDpYt7qDVS4iNLTkvODL'
+    ];
+
+    const VIDEO_ITEMS = [
+      '1n8Gu7vejsH3V9SQDX6UtAPr7A6U1gT6o',
+      '15ZkMeLQ_tBGC-k0k8qgVwoFwEN6Qogdl',
+      '1nYGWe2EMFGFQvJW0KYc6zBADy94uO4IK',
+      '145NN7L6HZfqvhg6SjkzH4wehflHjOKtU',
+      '1ibGh5wGwIx-RgMUX9AnhOkaR2MYfKyhX',
+      '1ECsV88f2HgbdInhuH_VfomA5IctaMXup',
+      '1xmyZac973XyPt1Fzc66SFgd6CVlZWb_C',
+      '1INnvmP5z4gHDk7SX-PsVtEpob5Kj3aNp',
+      '1c1BK5ec40k39ST0uNjxrHuWJOxDXjHIA',
+      '1uS0mrd9twXryJkxAbE63OroJsKPsvW1q',
+      '1PkFZaRKrkwnVZUyVbJ4XlY5RdrQs310p',
+      '1hm0AlhsleotL49onKlhjlcHZE9WTIyGq',
+      '1fKkpvurlZLrEUfR2nZ7dxym5m_FHseg6',
+      '1Mm-3jvPIqGz2sz6wE6PDAvw9mosthRvV',
+      '1Iaa0WcVC1wvxYyoFVFurpcssMcKpWdM9',
+      '1awxJJBkveM7HRgZMUp8yd2La57zhWLnp',
+      '1D490keD8PY6MgPTaZAQ6YaR1QxeEcEI0',
+      '1s0a0h1oc2zFMHrgs3LWNsBCW3sIquHYX',
+      '1wzZ5rC-MONtOZmfseyd2aHj7c0E4iDyn',
+      '1ihS6z_JHYdK3-bfNuzAXiRlKO4lyJ7Hw',
+      '1NaU3g7yVMehdaSD1868bX7NzkT4C3R8I',
+      '1WwL7TMN152amPjbBCmvRjZzxmFKjUjbp',
+      '1QFDPya7IWiE6jpog3B3L2G6YWaIRHJh5',
+      '133GNCz_2LGRqky1nkBFhjm8T4kLu8qzN',
+      '10YtVEC6zjNX1eJVfrh06OPBnZ0uDiJrN',
+      '122w2gazDGx6cF19a12b48FgB4hJGHkNF',
+      '1Mtdk46Dmn9mi6gqmRBeJNCzIpbftpSIk',
+      '1xHp5o-7hQhpU4QaoX2cQOZhn_hH3T5mD',
+      '1FhBj5-T6Aas7Eq62vWTtXxVlvI25RU8Y',
+      '1qpmQVrL12u3dElesYwfIUB2jq9ezFzv0',
+      '1WkvvLJdSM1kkN991R0cUmO1zrS1ZsEgN',
+      '1Q0hoybGQX6H-co-gvCz9b-DkSsZFDVfD',
+      '105K8lWKD0vgP9np1yLcs59ByCSJSrPQJ',
+      '15P7D7mUAjK32FE5ODK5VEDSFgE3I740G',
+      '1_dbpnZdMoiHnWsEk5fhcPHVICg-CoM_d',
+      '1FThH924PrunheDqsO7lTdte5Ct9hR1NM',
+      '1k-d3FjgFtZDVulZ8PO1Gzn61NeDaw2qv',
+      '10EZj089ljH-aXyhAvsdYSN9c9R5Cvtya',
+      '1UlXHCrQKDnrd2H1EN8SIID_YcDwXB16g'
+    ];
 
     function openLightbox(url) {
       const modal = document.getElementById('lightbox-modal');
@@ -148,6 +248,27 @@
       }
     }
 
+    function openVideoModal(fileId, title) {
+      const modal = document.getElementById('video-modal');
+      const frame = document.getElementById('video-modal-frame');
+      frame.src = `https://drive.google.com/file/d/${fileId}/preview`;
+      frame.title = title || 'EP story video';
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoModal(event) {
+      if (event.target.id === 'video-modal' || event.target.classList.contains('video-modal-close')) {
+        const modal = document.getElementById('video-modal');
+        const frame = document.getElementById('video-modal-frame');
+        frame.src = '';
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
     function setupCarouselWheel(container) {
       if (!container) return;
       container.addEventListener('wheel', (event) => {
@@ -157,69 +278,55 @@
       }, { passive: false });
     }
 
-    async function loadStories() {
+    function loadStoriesFromDrive() {
       const imageCarousel = document.getElementById('image-carousel');
       const videoCarousel = document.getElementById('video-carousel');
       const imagesLoading = document.getElementById('images-loading');
       const videosLoading = document.getElementById('videos-loading');
 
-      try {
-        const res = await fetch(API_URL);
-        if (!res.ok) throw new Error(`Server Error (${res.status})`);
+      if (!PHOTO_ITEMS.length) {
+        imagesLoading.textContent = 'No photos available yet.';
+      } else {
+        imagesLoading.classList.add('hidden');
+        imageCarousel.classList.remove('hidden');
+        PHOTO_ITEMS.forEach((id) => {
+          const thumbUrl = `https://drive.google.com/thumbnail?id=${id}&sz=w900`;
+          const largeUrl = `https://drive.google.com/thumbnail?id=${id}&sz=w1800`;
+          imageCarousel.innerHTML += `
+            <button class="carousel-item" type="button" onclick="openLightbox('${largeUrl}')">
+              <img src="${thumbUrl}" alt="EP story" loading="lazy">
+            </button>`;
+        });
+        setupCarouselWheel(imageCarousel);
+      }
 
-        const rawData = await res.json();
-        let data = [];
-        if (Array.isArray(rawData) && rawData.length > 0 && rawData[0].files) data = rawData[0].files;
-        else if (rawData.files) data = rawData.files;
-        else if (Array.isArray(rawData)) data = rawData;
-
-        const images = data.filter((file) => (file.mimeType || '').includes('image'));
-        const videos = data.filter((file) => (file.mimeType || '').includes('video'));
-
-        if (images.length === 0) {
-          imagesLoading.textContent = 'No photos available yet.';
-        } else {
-          imagesLoading.classList.add('hidden');
-          imageCarousel.classList.remove('hidden');
-          images.forEach((file) => {
-            const thumbUrl = `https://drive.google.com/thumbnail?id=${file.id}&sz=w800`;
-            const largeUrl = `https://drive.google.com/thumbnail?id=${file.id}&sz=w1600`;
-            imageCarousel.innerHTML += `
-              <button class="carousel-item" onclick="openLightbox('${largeUrl}')">
-                <img src="${thumbUrl}" alt="Story" loading="lazy">
-              </button>`;
-          });
-          setupCarouselWheel(imageCarousel);
-        }
-
-        if (videos.length === 0) {
-          videosLoading.textContent = 'No videos available yet.';
-        } else {
-          videosLoading.classList.add('hidden');
-          videoCarousel.classList.remove('hidden');
-          videos.forEach((file) => {
-            const vidUrl = `https://drive.google.com/file/d/${file.id}/preview`;
-            videoCarousel.innerHTML += `
-              <div class="carousel-item video">
-                <iframe src="${vidUrl}" allow="autoplay"></iframe>
-              </div>`;
-          });
-          setupCarouselWheel(videoCarousel);
-        }
-      } catch (err) {
-        if (document.getElementById('images-loading')) {
-          document.getElementById('images-loading').textContent = `Failed to load: ${err.message}`;
-        }
-        if (document.getElementById('videos-loading')) {
-          document.getElementById('videos-loading').textContent = `Failed to load: ${err.message}`;
-        }
+      if (!VIDEO_ITEMS.length) {
+        videosLoading.textContent = 'No videos available yet.';
+      } else {
+        videosLoading.classList.add('hidden');
+        videoCarousel.classList.remove('hidden');
+        VIDEO_ITEMS.forEach((id) => {
+          const thumbUrl = `https://drive.google.com/thumbnail?id=${id}&sz=w720-h1280`;
+          videoCarousel.innerHTML += `
+            <button class="carousel-item video-thumb" type="button" onclick="openVideoModal('${id}', 'EP story video')">
+              <img src="${thumbUrl}" alt="EP story video thumbnail" loading="lazy">
+              <span class="thumb-play" aria-hidden="true">&#9654;</span>
+            </button>`;
+        });
+        setupCarouselWheel(videoCarousel);
       }
     }
 
-    loadStories();
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        const lightbox = document.getElementById('lightbox-modal');
+        const videoModal = document.getElementById('video-modal');
+        if (lightbox.classList.contains('flex')) closeLightbox({ target: lightbox });
+        if (videoModal.classList.contains('flex')) closeVideoModal({ target: videoModal });
+      }
+    });
+
+    loadStoriesFromDrive();
   </script>
 </body>
 </html>
-
-
-
