@@ -876,6 +876,8 @@ img {
 .video-column {
   width: 100%;
   flex: 1 1 100%;
+  max-width: min(760px, 100%);
+  margin-inline: auto;
 }
 
 @keyframes spin {
@@ -932,7 +934,7 @@ img {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(6, 18, 38, 0.08) 0%, rgba(6, 18, 38, 0.38) 100%);
+  background: linear-gradient(180deg, rgba(6, 18, 38, 0.04) 0%, rgba(6, 18, 38, 0.2) 100%);
   pointer-events: none;
 }
 
