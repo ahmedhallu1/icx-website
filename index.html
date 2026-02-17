@@ -79,13 +79,13 @@
         <div class="safety-content">
           <div class="badge">Safety Index</div>
           <h2 class="section-title safety-headline">
-            <span class="safety-highlight">ALEXANDRIA</span> RANKS FIRST
+            <span class="safety-highlight">ALEXANDRIA</span> <span class="safety-highlight">RANKS FIRST</span>
             AMONG AFRICA'S TOP 10 CITIES FOR
             <span class="safety-highlight">QUALITY OF LIFE IN 2026</span>
           </h2>
           <p class="section-subtitle">Alexandria is recognized for safety, quality infrastructure, and daily livability for residents and international participants.</p>
           <div class="safety-link">
-            <a class="btn-ghost" href="https://thepeninsulaqatar.com/article/20/01/2026/alexandria-leads-2025-safety-index-for-african-cities" target="_blank" rel="noopener">Read the source</a>
+            <a class="btn-ghost" href="https://africa.businessinsider.com/local/lifestyle/top-5-safest-major-african-cities-at-the-end-of-2025/355d228" target="_blank" rel="noopener">Read the source</a>
           </div>
         </div>
         <div class="safety-visual">
@@ -235,8 +235,7 @@
         <p class="text-mist footer-credit">Created by <a href="https://www.linkedin.com/in/ahmedhallul" target="_blank" rel="noopener" class="text-gold">Ahmed Hallul</a></p>
       </div>
       <div class="text-center md:text-right footer-right">
-        <img src="logo-iris.png" alt="IRIS logo" class="iris-logo">
-        <p class="text-mist">Directed by EB <span class="text-gold">IRIS</span></p>
+        <p class="text-mist footer-director">Directed by <span class="text-gold director-name">EB IRIS</span></p>
       </div>
     </div>
   </footer>
@@ -621,6 +620,26 @@
       return `${numeric.toLocaleString('en-US')} EGP`;
     }
 
+    const VOLUNTEER_SDG_GIF_MAP = [
+      { keys: ['aquatica'], file: 'SDGs/GIF/Aquatica.gif' },
+      { keys: ['globalclassroom', 'classroom', 'fingerprint'], file: 'SDGs/GIF/Global Classroom - Fingerprint.gif' },
+      { keys: ['onthemap', 'skillup'], file: 'SDGs/GIF/Skill up! - On the map.gif' },
+      { keys: ['scaleup'], file: 'SDGs/GIF/Scale up!.gif' },
+      { keys: ['heartbeat'], file: 'SDGs/GIF/Heartbeat.gif' },
+      { keys: ['rooted'], file: 'SDGs/GIF/Rooted.gif' },
+      { keys: ['greenleaders'], file: 'SDGs/GIF/Green leaders.gif' }
+    ];
+
+    function resolveVolunteerSdgGif(position, subProduct) {
+      const compact = `${normalizeText(position)} ${normalizeText(subProduct)}`
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '');
+      if (!compact) return '';
+
+      const found = VOLUNTEER_SDG_GIF_MAP.find((entry) => entry.keys.some((key) => compact.includes(key)));
+      return found ? encodeURI(found.file) : '';
+    }
+
     function buildInfoRows(opp, category) {
       const rows = [];
       const company = normalizeText(opp.company);
@@ -755,6 +774,7 @@
         const isOpen = state === 'open';
         const detailsLink = normalizeText(opp.link);
         const bookletLink = normalizeText(opp.booklet);
+        const volunteerGif = category === 'Global Volunteer' ? resolveVolunteerSdgGif(position, subProduct) : '';
 
         const infoRows = buildInfoRows(opp, category);
         const statusBadge = isUnderReview
@@ -773,7 +793,10 @@
           <div class="listing-card" style="--accent: ${accent};">
             <div class="space-y-3">
               <div class="listing-card-top">
-                <h4 class="text-lg font-semibold text-ink">${escapeHTML(position)}</h4>
+                <div class="listing-title-wrap">
+                  ${volunteerGif ? `<img src="${escapeHTML(volunteerGif)}" alt="SDG for ${escapeHTML(position)}" class="volunteer-sdg-gif" loading="lazy">` : ''}
+                  <h4 class="text-lg font-semibold text-ink">${escapeHTML(position)}</h4>
+                </div>
                 ${statusBadge}
               </div>
               ${subProduct ? `<span class="accent-chip">${escapeHTML(subProduct)}</span>` : ''}

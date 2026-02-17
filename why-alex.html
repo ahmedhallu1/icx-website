@@ -162,11 +162,15 @@
         <p class="text-mist footer-credit">Created by <a href="https://www.linkedin.com/in/ahmedhallul" target="_blank" rel="noopener" class="text-gold">Ahmed Hallul</a></p>
       </div>
       <div class="text-center md:text-right footer-right">
-        <img src="logo-iris.png" alt="IRIS logo" class="iris-logo">
-        <p class="text-mist">Directed by EB <span class="text-gold">IRIS</span></p>
+        <p class="text-mist footer-director">Directed by <span class="text-gold director-name">EB IRIS</span></p>
       </div>
     </div>
   </footer>
+
+  <div id="cuisine-lightbox-modal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4" onclick="closeCuisineLightbox(event)">
+    <button class="cuisine-lightbox-close absolute top-4 right-6 text-white text-5xl leading-none cursor-pointer bg-transparent border-0" type="button" onclick="closeCuisineLightbox(event)" aria-label="Close image">&times;</button>
+    <img id="cuisine-lightbox-image" src="" class="max-h-[72vh] max-w-[72vw] rounded-2xl shadow-2xl object-contain border border-white/20" alt="Enlarged cuisine">
+  </div>
 
   <script src="site.js"></script>
   <script>
@@ -256,22 +260,80 @@
       }, { passive: false });
     }
 
+    function escapeAttr(value) {
+      return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    }
+
+    function openCuisineLightbox(imageUrl, title) {
+      const modal = document.getElementById('cuisine-lightbox-modal');
+      const image = document.getElementById('cuisine-lightbox-image');
+      image.src = imageUrl;
+      image.alt = `${title} preview`;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCuisineLightbox(event) {
+      const isBackdrop = event.target.id === 'cuisine-lightbox-modal';
+      const isClose = event.target.classList.contains('cuisine-lightbox-close');
+      if (!isBackdrop && !isClose) return;
+
+      const modal = document.getElementById('cuisine-lightbox-modal');
+      const image = document.getElementById('cuisine-lightbox-image');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      image.src = '';
+      image.alt = 'Enlarged cuisine';
+      document.body.style.overflow = 'auto';
+    }
+
     function renderCarousel(items, targetId) {
       const carousel = document.getElementById(targetId);
       if (!carousel) return;
+      const isActivities = targetId === 'activities-carousel';
 
       carousel.innerHTML = items.map((item) => {
         const thumb = `https://drive.google.com/thumbnail?id=${item.id}&sz=w1200`;
-        const link = `https://drive.google.com/file/d/${item.id}/view`;
+        if (isActivities) {
+          const searchLink = `https://www.google.com/search?q=${encodeURIComponent(`${item.name} Alexandria Egypt`)}`;
+          return `
+            <a class="carousel-item cuisine-card" href="${searchLink}" target="_blank" rel="noopener">
+              <img src="${thumb}" alt="${item.name}" loading="lazy">
+              <span class="cuisine-name">${item.name}</span>
+            </a>`;
+        }
+
+        const largeImage = `https://drive.google.com/thumbnail?id=${item.id}&sz=w2200`;
         return `
-          <a class="carousel-item cuisine-card" href="${link}" target="_blank" rel="noopener">
+          <button class="carousel-item cuisine-card cuisine-lightbox-trigger" type="button" data-image="${largeImage}" data-title="${escapeAttr(item.name)}">
             <img src="${thumb}" alt="${item.name}" loading="lazy">
             <span class="cuisine-name">${item.name}</span>
-          </a>`;
+          </button>`;
       }).join('');
+
+      if (!isActivities) {
+        carousel.querySelectorAll('.cuisine-lightbox-trigger').forEach((button) => {
+          button.addEventListener('click', () => {
+            openCuisineLightbox(button.dataset.image, button.dataset.title || 'Cuisine');
+          });
+        });
+      }
 
       setupCarouselWheel(carousel);
     }
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+      const modal = document.getElementById('cuisine-lightbox-modal');
+      if (modal.classList.contains('flex')) {
+        closeCuisineLightbox({ target: modal });
+      }
+    });
 
     renderCarousel(CUISINE_ITEMS, 'cuisine-carousel');
     renderCarousel(ACTIVITIES_ITEMS, 'activities-carousel');
