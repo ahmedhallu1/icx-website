@@ -79,9 +79,10 @@
         <div class="safety-content">
           <div class="badge">Safety Index</div>
           <h2 class="section-title safety-headline">
-            <span class="safety-highlight">ALEXANDRIA</span> <span class="safety-highlight">RANKS FIRST</span>
-            AMONG AFRICA'S TOP 10 CITIES FOR
-            <span class="safety-highlight">QUALITY OF LIFE IN 2026</span>
+            <span class="safety-highlight">ALEXANDRIA RANKED FIRST</span> AS THE
+            <span class="safety-highlight">SAFEST CITY</span> IN
+            <span class="safety-highlight">AFRICA</span>
+            IN THE 2025 SAFETY INDEX
           </h2>
           <p class="section-subtitle">Alexandria is recognized for safety, quality infrastructure, and daily livability for residents and international participants.</p>
           <div class="safety-link">
@@ -104,8 +105,12 @@
           <p class="section-subtitle">A short cinematic glimpse of the sea, the streets, and the spirit of Alexandria.</p>
         </div>
         <div class="lg:w-1/2 w-full self-stretch video-column">
-          <div class="video-frame">
-            <iframe src="https://drive.google.com/file/d/1y3uPb3A6rKYubF2etqnOJ7RB5qT-JTty/preview" title="Alexandria video" allow="autoplay" loading="lazy"></iframe>
+          <div class="video-frame city-video-preview">
+            <button type="button" class="video-launch-btn" onclick="openCityVideoModal()">
+              <img src="https://drive.google.com/thumbnail?id=1y3uPb3A6rKYubF2etqnOJ7RB5qT-JTty&sz=w1600" alt="Play Alexandria from the shore video" loading="lazy">
+              <span class="city-video-play" aria-hidden="true">&#9654;</span>
+              <span class="sr-only">Play Alexandria from the shore video</span>
+            </button>
           </div>
           <p class="text-sm text-mist mt-3">Video credit: Elmamony Bmx</p>
         </div>
@@ -163,9 +168,9 @@
     <div class="container mx-auto px-6">
       <div class="text-center mb-12">
         <h2 class="section-title">Application Process</h2>
-        <p class="section-subtitle mx-auto">Two clear tracks to guide your journey from application to realization.</p>
+        <p class="section-subtitle mx-auto">Three clear tracks to guide your journey from application to realization.</p>
       </div>
-      <div class="process-grid md:grid-cols-2">
+      <div class="process-grid md:grid-cols-2 xl:grid-cols-3">
         <div class="process-card volunteer">
           <h3>
             <img src="GV LOGO COLOR.png" alt="Global Volunteer logo" class="process-logo">
@@ -183,6 +188,19 @@
           <h3>
             <img src="GTA LOGO COLOR.png" alt="Global Talent logo" class="process-logo">
             Incoming Global Talent (IGT)
+          </h3>
+          <ul>
+            <li><span class="step-index">1</span>Apply</li>
+            <li><span class="step-index">2</span>Interview with Host</li>
+            <li><span class="step-index">3</span>Interview with Partner</li>
+            <li><span class="step-index">4</span>Get Accepted</li>
+            <li><span class="step-index">5</span>Realization</li>
+          </ul>
+        </div>
+        <div class="process-card teacher">
+          <h3>
+            <img src="GTE LOGO COLOR.png" alt="Global Teacher logo" class="process-logo">
+            Incoming Global Teacher (IGTe)
           </h3>
           <ul>
             <li><span class="step-index">1</span>Apply</li>
@@ -240,11 +258,21 @@
     </div>
   </footer>
 
+  <div id="city-video-modal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4" onclick="closeCityVideoModal(event)">
+    <div class="video-modal-card city-video-modal-card">
+      <button class="video-modal-close" type="button" onclick="closeCityVideoModal(event)" aria-label="Close video">&times;</button>
+      <div class="video-frame" id="city-video-modal-frame-wrap">
+        <iframe id="city-video-modal-frame" src="" allow="autoplay; fullscreen; picture-in-picture" loading="lazy" title="Alexandria video"></iframe>
+      </div>
+    </div>
+  </div>
+
   <script src="site.js"></script>
   <script>
     const GOOGLE_SHEET_ID = '1NJWKslbv7ZinFvJbe-c1DE24foFcJiCRncfNK-Lrm1Q';
     const GOOGLE_SHEET_TAB = 'master';
     const LOCAL_VISA_JSON = 'visa-data.json';
+    const CITY_VIDEO_ID = '1y3uPb3A6rKYubF2etqnOJ7RB5qT-JTty';
 
     const CATEGORY_META = {
       'Global Volunteer': {
@@ -668,6 +696,28 @@
       return rows.join('');
     }
 
+    function openCityVideoModal() {
+      const modal = document.getElementById('city-video-modal');
+      const frame = document.getElementById('city-video-modal-frame');
+      frame.src = `https://drive.google.com/file/d/${CITY_VIDEO_ID}/preview?hd=1`;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCityVideoModal(event) {
+      const isBackdrop = event.target.id === 'city-video-modal';
+      const isClose = event.target.classList.contains('video-modal-close');
+      if (!isBackdrop && !isClose) return;
+
+      const modal = document.getElementById('city-video-modal');
+      const frame = document.getElementById('city-video-modal-frame');
+      frame.src = '';
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }
+
     async function filterOpportunities(category) {
       currentCategory = category;
       const listings = document.getElementById('listings');
@@ -800,7 +850,7 @@
                 ${statusBadge}
               </div>
               ${subProduct ? `<span class="accent-chip">${escapeHTML(subProduct)}</span>` : ''}
-              <div class="text-sm text-mist space-y-1">
+              <div class="opp-info text-mist">
                 ${infoRows}
               </div>
             </div>
@@ -810,6 +860,14 @@
 
       container.innerHTML = cardsHTML;
     }
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+      const modal = document.getElementById('city-video-modal');
+      if (modal && modal.classList.contains('flex')) {
+        closeCityVideoModal({ target: modal });
+      }
+    });
   </script>
 </body>
 </html>

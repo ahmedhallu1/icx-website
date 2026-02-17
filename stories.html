@@ -229,6 +229,22 @@
       '1UlXHCrQKDnrd2H1EN8SIID_YcDwXB16g'
     ];
 
+    const DRIVE_ORDER_COLLATOR = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
+
+    function getDriveOrderLabel(item) {
+      if (item && typeof item === 'object') return String(item.name || item.id || '');
+      return String(item || '');
+    }
+
+    function getDriveItemId(item) {
+      if (item && typeof item === 'object') return String(item.id || '');
+      return String(item || '');
+    }
+
+    function sortDriveItemsAlphabetically(items) {
+      return [...items].sort((a, b) => DRIVE_ORDER_COLLATOR.compare(getDriveOrderLabel(a), getDriveOrderLabel(b)));
+    }
+
     function openLightbox(url) {
       const modal = document.getElementById('lightbox-modal');
       document.getElementById('lightbox-image').src = url;
@@ -288,7 +304,9 @@
       } else {
         imagesLoading.classList.add('hidden');
         imageCarousel.classList.remove('hidden');
-        PHOTO_ITEMS.forEach((id) => {
+        const sortedPhotos = sortDriveItemsAlphabetically(PHOTO_ITEMS);
+        sortedPhotos.forEach((item) => {
+          const id = getDriveItemId(item);
           const thumbUrl = `https://drive.google.com/thumbnail?id=${id}&sz=w900`;
           const largeUrl = `https://drive.google.com/thumbnail?id=${id}&sz=w1800`;
           imageCarousel.innerHTML += `
@@ -304,7 +322,9 @@
       } else {
         videosLoading.classList.add('hidden');
         videoCarousel.classList.remove('hidden');
-        VIDEO_ITEMS.forEach((id) => {
+        const sortedVideos = sortDriveItemsAlphabetically(VIDEO_ITEMS);
+        sortedVideos.forEach((item) => {
+          const id = getDriveItemId(item);
           const thumbUrl = `https://drive.google.com/thumbnail?id=${id}&sz=w720-h1280`;
           videoCarousel.innerHTML += `
             <button class="carousel-item video-thumb" type="button" onclick="openVideoModal('${id}', 'EP story video')">

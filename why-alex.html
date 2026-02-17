@@ -251,6 +251,60 @@
       { id: '15YOA6fdsHFI8fEL4Qp-aZi_AGyJEvSp-', name: 'Zanet El Setat' }
     ];
 
+    const DRIVE_TITLE_BY_ID = {
+      '1K4dSaeeGNhjDhZv6sleiLzuJCz6TkIao': '12. Alex - Africano Park Alexandria Safari.webp',
+      '13B3zQL3TWxCyv4n6lhqPfWgEnLKB9KDD': '5. Alex - Al Max Light House.jpg',
+      '1eogEattvL2lS6cCyIEgpNL6zPk3kDTho': '50. Alex - Alexandria Corniche.jpg',
+      '1tpXTO4u1f6BQFo2Pe5xlyIpmidP6-u2r': '23. Alex - Alexandria National Museum.webp',
+      '12ewDbLcw4ScK-3VfUQ8LgpKiNIPBs_OX': '25. Alex - Alexandria Naval Unknown Soldier Memorial.jpg',
+      '1a8g5svAxuqwwbnZ41xmrjo_Aq_e3FOjF': '24. Alex - Ali El Hendi Cafe.jpg',
+      '171baSYK6UTTwclQWkRM4bbylJ359sl0J': '10. Alex - Antoniads.jpeg',
+      '15MdzApkZev7VEgsg4Ui3agzVnBU6dip5': '3. Alex - Bibliotheca Alexandrina.jpg',
+      '1gRNfERDyeGsxtBA7Nef2QRt2KHbXrbji': '17. Alex - Boats Harbour.jpg',
+      '1wEIvIn41n8eXgc7mWuQhlmDggfDw7HxB': '4. Alex - Catacombs Kom El Shokafa.jpg',
+      '1fN1_ynWOZkNorF3MS4Jm9RoshZx0cBcg': '34. Alex - Cavay Museum.webp',
+      '1PfXR6Z6T40JV4GxtxO0CLqCrk4UjxgKU': '47. Alex - Douple Decker Bus by the Sea.jpg',
+      '1g7jqj016yd8rYyPtEkwiOIAD-LUKEmIR': '22. Alex - El lol Seafood.jpg',
+      '1SId9Kj-17h8S154azLZMCn3uzqCxF7_V': '40. Alex - El Maamora Amusement Park.jpg',
+      '1a5M7G78CDJ8AXApWqdpCZad-qSG5NBPy': '11. Alex - El Montazah Gardens.webp',
+      '1lllt3M_T3rA2qncqH-jJmPV0O7sFRmjU': '6. Alex - El Motazah Beach.jpg',
+      '1BXAQu1TWPGNNTy9Z_0N0phGAohMKA0IH': '18. Alex - El Motazah Light House.jpg',
+      '1HJIYcc67d7iLaoQ_DL6dRiMxc0TgSpdi': '33. Alex - El Motazah Palace.jpg',
+      '1J0BJhRyZ7LEzZxJv7RwQ985Y5CaiN4sR': '26. Alex - El Mursi Abou El Abbas Mosque.jpg',
+      '1miN60QTFRiK137H_Ef3QKRGo_yORTGY5': '30. Alex - El Nabi Daniel Street.jpg',
+      '1xrku_R9eowa40q5io5JaDmUOd78O21G_': '32. Alex - Eliyahu Hanavi Synagogue.jpg',
+      '1SH1tiAd_A7_Zj3BeOj8ooWLRoutFbyQY': '41. Alex - Fish Museum.png',
+      '1gJCqWSM-w4SZRAeFpztmE5fE8WaSSEKH': '43. Alex - Florelle.jpg',
+      '1PKdgEtyoGbyy2nLz51BhvPDmeqUQCrTZ': '35. Alex - Gleem Bay food court.jpg',
+      '1X0iS2xGSG3-USldGYefHeKTAPGfk60wC': '13. Alex - Graeco-Roman Museum.jpeg',
+      '1kFWKwqTOtIbvsury8xeQ-9cJKIvpO84D': '44. Alex - Gravity Code.jpeg',
+      '1YrSV2p115JLY8_C0_xcD134PvhWjhMUi': '7. Alex - Greek Cemetery.jpg',
+      '1joPb6xVs-SphEOPFx4gaQkSh3cb3A4-x': '42. Alex - Green Plaza.jpg',
+      '1Nfq3TUpzFp62y1wx_MEc4e1zwtofMhMh': '46. Alex - Horse Riding by the Sea.jpg',
+      '1ySL3eADredey9Yvwd7FfcNdO0gFvTZpx': '48. Alex - Kayaking by the Light House.jpg',
+      '1zvPxonHj51Y4Alxc7WQm_4EbGZ33KSU2': '21. Alex - King Tea Palace.jpg',
+      '1g0CzCTWSjVe_YuBCNTaGfvNC3DERwY3B': '51. Alex - Mansheya.jpg',
+      '1BjzUTP_utdULIO9Ob8PdyUdKhYd_qv77': '39. Alex - Museum of Fine Arts.jpg',
+      '1KxJyP68NG5zHXIiORCmt7pDuM1efgM7Q': '19. Alex - Opera House.jpg',
+      '1UiF9yxV7crzze7kz_ayZO19m2_BNOYG6': '8. Alex - Planetarium Science Center.png',
+      '1-lT6uHiK5ZXbS3DyXt4kovm-1_YvLUfs': '45. Alex - Point 6.jpg',
+      '1tUD3VoVCXlwi9VdqQQAKgTMLxozoqB_-': '29. Alex - Pompey&#39;s Pillar.jpg',
+      '1E4VKoj6s-DB2Eg3RfS2yesF1VKIaNra4': '49. Alex - Pottery in a Greenhouse.jpg',
+      '1yJBikmOAcV--YAN6sZNvqMCMYmHOp0IZ': '1. Alex - Quitbay Citadel.webp',
+      '1C9scSsso7HjGRuYVJDRBsgZ_LRsFwoxx': '27. Alex - Ras El-Tin Palace.jpg',
+      '1GTtXE6HeIJFGxkJpZ-Uqwk-mliNISs7-': '14. Alex - Roman Theater.jpg',
+      '1fKUQSS72gQHmuIkvpZU7OpmmAA9qOp1w': '28. Alex - Roots Greenhouse.jpg',
+      '1SJJgXGlnDU06FUKsqUeMNU5mp_nd_i4U': '20. Alex - Saint Mark&#39;s Coptic Orthodox Cathedral.jpg',
+      '1BOQaAUvMzrtA-XtvnUCA1E66uzyBhktT': '31. Alex - San Stefano.jpg',
+      '1CECs_53LMGJ99z8nmKcKlC0UpmZH40N1': '9. Alex - Sound And Light Show.jpg',
+      '1Im7gPEU5GAFztlNuzbLf_ZVjInRtcORc': '36. Alex - Stanley Beach.jpg',
+      '1rBELRpjBGyVcmByRpJOqcZQaBk8rFi_a': '2. Alex - Stanley Bridge.jpg',
+      '19HJLN7_IsW_55lqSqAYaV3ZIy5aG-syc': '15. Alex - Sunken island.jpeg',
+      '1Kn4DrkvmEVGK8jbo--ojN8Zk0CpjAybE': '16. Alex - The Royal Jewelry Museum.jpg',
+      '1TKSmAX7uqFciRRCPY_FjbF9i3PYVhkm3': '38. Alex - The Walk food court.jpg',
+      '15YOA6fdsHFI8fEL4Qp-aZi_AGyJEvSp-': '37Alex - Zan&#39;et el Setat.jpg'
+    };
+
     function setupCarouselWheel(container) {
       if (!container) return;
       container.addEventListener('wheel', (event) => {
@@ -266,6 +320,32 @@
         .replace(/"/g, '&quot;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;');
+    }
+
+    const DRIVE_ORDER_COLLATOR = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
+
+    function getDriveOrderLabel(item) {
+      if (item && typeof item === 'object') {
+        const driveTitle = DRIVE_TITLE_BY_ID[item.id];
+        if (driveTitle) return driveTitle.replace(/&#39;/g, "'");
+        return String(item.name || item.id || '');
+      }
+      return String(item || '');
+    }
+
+    function getDriveOrderNumber(label) {
+      const match = String(label).match(/^\s*(\d+)/);
+      return match ? Number(match[1]) : Number.POSITIVE_INFINITY;
+    }
+
+    function sortDriveItemsAlphabetically(items) {
+      return [...items].sort((a, b) => {
+        const aLabel = getDriveOrderLabel(a);
+        const bLabel = getDriveOrderLabel(b);
+        const orderDelta = getDriveOrderNumber(aLabel) - getDriveOrderNumber(bLabel);
+        if (orderDelta !== 0) return orderDelta;
+        return DRIVE_ORDER_COLLATOR.compare(aLabel, bLabel);
+      });
     }
 
     function openCuisineLightbox(imageUrl, title) {
@@ -296,8 +376,9 @@
       const carousel = document.getElementById(targetId);
       if (!carousel) return;
       const isActivities = targetId === 'activities-carousel';
+      const sortedItems = sortDriveItemsAlphabetically(items);
 
-      carousel.innerHTML = items.map((item) => {
+      carousel.innerHTML = sortedItems.map((item) => {
         const thumb = `https://drive.google.com/thumbnail?id=${item.id}&sz=w1200`;
         if (isActivities) {
           const searchLink = `https://www.google.com/search?q=${encodeURIComponent(`${item.name} Alexandria Egypt`)}`;

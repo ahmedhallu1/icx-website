@@ -689,7 +689,7 @@ img {
   display: grid;
   gap: 24px;
   width: 100%;
-  max-width: 980px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -705,6 +705,10 @@ img {
 
 .process-card.talent {
   --process-accent: #3b82f6;
+}
+
+.process-card.teacher {
+  --process-accent: var(--teacher);
 }
 
 .process-card h3 {
@@ -843,6 +847,17 @@ img {
   color: rgba(247, 243, 234, 0.94);
 }
 
+.opp-info {
+  display: grid;
+  gap: 6px;
+  font-size: clamp(0.98rem, 1.05vw, 1.08rem);
+  line-height: 1.5;
+}
+
+.opp-info p {
+  margin: 0;
+}
+
 .card-actions {
   display: flex;
   flex-wrap: wrap;
@@ -890,6 +905,55 @@ img {
 
 .video-frame {
   margin: 0;
+}
+
+.city-video-preview {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.video-launch-btn {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.video-launch-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-launch-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 18, 38, 0.08) 0%, rgba(6, 18, 38, 0.38) 100%);
+  pointer-events: none;
+}
+
+.city-video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 76px;
+  height: 76px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 18, 38, 0.62);
+  border: 2px solid rgba(255, 255, 255, 0.78);
+  color: #fff;
+  font-size: 1.7rem;
+  box-shadow: 0 16px 30px rgba(2, 8, 18, 0.45);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .filter-select {
@@ -1463,19 +1527,30 @@ img {
 
 #video-modal,
 #lightbox-modal,
-#cuisine-lightbox-modal {
+#cuisine-lightbox-modal,
+#city-video-modal {
   z-index: 120;
   padding-top: max(16px, env(safe-area-inset-top));
 }
 
-#video-modal {
+#video-modal,
+#city-video-modal {
   align-items: flex-start;
   overflow-y: auto;
   padding-bottom: 16px;
 }
 
-#video-modal .video-modal-card {
+#video-modal .video-modal-card,
+#city-video-modal .video-modal-card {
   margin: 0 auto;
+}
+
+#city-video-modal .city-video-modal-card {
+  width: min(980px, 95vw);
+}
+
+#city-video-modal .city-video-modal-card .video-frame {
+  padding-top: 56.25%;
 }
 
 .follow-icx-panel {
@@ -1758,6 +1833,14 @@ img {
   gap: 8px;
 }
 
+.footer-left {
+  gap: 1px;
+}
+
+.footer-left p {
+  line-height: 1.22;
+}
+
 .footer-middle {
   align-items: center;
 }
@@ -1825,7 +1908,7 @@ img {
 
 @media (min-width: 768px) {
   .process-grid {
-    --process-balance-space: clamp(24px, 3.2vw, 44px);
+    --process-balance-space: clamp(20px, 2.4vw, 34px);
     gap: var(--process-balance-space);
     padding-inline: var(--process-balance-space);
     box-sizing: border-box;
