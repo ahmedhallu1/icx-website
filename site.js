@@ -101,7 +101,7 @@
         closeDropdowns();
       } else {
         // Navigate to home page with category parameter
-        window.location.href = `index.html?category=${encodeURIComponent(category)}#opportunities`;
+        window.location.href = `/?category=${encodeURIComponent(category)}#opportunities`;
       }
     });
   }
