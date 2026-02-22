@@ -11,14 +11,14 @@
 <body class="flex flex-col min-h-screen">
   <nav class="site-nav">
     <div class="nav-inner container mx-auto">
-      <a href="/" class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3">
         <img src="aiesec-logo.png" alt="AIESEC logo" class="h-10 md:h-12">
       </a>
       <div class="nav-links">
-        <a href="/" class="nav-link active">Home</a>
-        <a href="/why-alex" class="nav-link">Why Alex</a>
-        <a href="/eps-stories" class="nav-link">EPs Stories</a>
-        <a href="/contact-us" class="nav-link">Contact us</a>
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="why-alex.html" class="nav-link">Why Alex</a>
+        <a href="eps-stories.html" class="nav-link">EPs Stories</a>
+        <a href="contact-us.html" class="nav-link">Contact us</a>
         <div class="dropdown" data-dropdown>
           <button class="dropdown-button" type="button" data-dropdown-button aria-expanded="false" aria-controls="opportunity-menu">
             Opportunities
@@ -27,9 +27,9 @@
             </svg>
           </button>
           <div class="dropdown-panel" id="opportunity-menu" data-dropdown-panel role="menu">
-            <a class="dropdown-item" href="/?category=Global%20Volunteer#opportunities" data-opportunity="Global Volunteer">Global Volunteer</a>
-            <a class="dropdown-item" href="/?category=Global%20Talent#opportunities" data-opportunity="Global Talent">Global Talent</a>
-            <a class="dropdown-item" href="/?category=Global%20Teacher#opportunities" data-opportunity="Global Teacher">Global Teacher</a>
+            <a class="dropdown-item" href="index.html?category=Global%20Volunteer#opportunities" data-opportunity="Global Volunteer">Global Volunteer</a>
+            <a class="dropdown-item" href="index.html?category=Global%20Talent#opportunities" data-opportunity="Global Talent">Global Talent</a>
+            <a class="dropdown-item" href="index.html?category=Global%20Teacher#opportunities" data-opportunity="Global Teacher">Global Teacher</a>
           </div>
         </div>
       </div>
@@ -42,10 +42,10 @@
     </div>
     <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
       <div class="container mx-auto px-6">
-        <a href="/" class="mobile-link active">Home</a>
-        <a href="/why-alex" class="mobile-link">Why Alex</a>
-        <a href="/eps-stories" class="mobile-link">EPs Stories</a>
-        <a href="/contact-us" class="mobile-link">Contact us</a>
+        <a href="index.html" class="mobile-link active">Home</a>
+        <a href="why-alex.html" class="mobile-link">Why Alex</a>
+        <a href="eps-stories.html" class="mobile-link">EPs Stories</a>
+        <a href="contact-us.html" class="mobile-link">Contact us</a>
         <div class="mobile-divider"></div>
         <div class="dropdown mobile-dropdown" data-dropdown>
           <button class="dropdown-button" type="button" data-dropdown-button aria-expanded="false" aria-controls="mobile-opportunity-menu">
@@ -55,9 +55,9 @@
             </svg>
           </button>
           <div class="dropdown-panel" id="mobile-opportunity-menu" data-dropdown-panel role="menu">
-            <a class="dropdown-item" href="/?category=Global%20Volunteer#opportunities" data-opportunity="Global Volunteer">Global Volunteer</a>
-            <a class="dropdown-item" href="/?category=Global%20Talent#opportunities" data-opportunity="Global Talent">Global Talent</a>
-            <a class="dropdown-item" href="/?category=Global%20Teacher#opportunities" data-opportunity="Global Teacher">Global Teacher</a>
+            <a class="dropdown-item" href="index.html?category=Global%20Volunteer#opportunities" data-opportunity="Global Volunteer">Global Volunteer</a>
+            <a class="dropdown-item" href="index.html?category=Global%20Talent#opportunities" data-opportunity="Global Talent">Global Talent</a>
+            <a class="dropdown-item" href="index.html?category=Global%20Teacher#opportunities" data-opportunity="Global Teacher">Global Teacher</a>
           </div>
         </div>
       </div>
@@ -160,6 +160,41 @@
           </div>
         </div>
         <div id="cards-container" class="grid md:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="booklets" class="section reveal" data-reveal="up">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="section-title">Booklets</h2>
+        <p class="section-subtitle mx-auto">Browse both guides before you begin your application journey.</p>
+      </div>
+      <div class="booklet-grid md:grid-cols-2">
+        <article class="booklet-card">
+          <h3>Explore ALEXANDRIA booklet</h3>
+          <p>A city-first guide with practical context on Alexandria and what to expect during your stay.</p>
+          <button
+            class="btn-ghost booklet-open-btn"
+            type="button"
+            data-booklet-title="Explore ALEXANDRIA booklet"
+            data-booklet-preview="https://www.experienceegypt.eg/files/Alexandria-Eng.pdf"
+            data-booklet-full="https://share.google/5aQNQce8OYrfLm3Br">
+            Preview booklet
+          </button>
+        </article>
+        <article class="booklet-card">
+          <h3>EGYPT through AIESEC in Alexandria booklet</h3>
+          <p>An overview of Egypt through the AIESEC in Alexandria lens, with local and program insights.</p>
+          <button
+            class="btn-ghost booklet-open-btn"
+            type="button"
+            data-booklet-title="EGYPT through AIESEC in Alexandria booklet"
+            data-booklet-preview="https://www.experienceegypt.eg/files/Egypt%20Tourism%20Guide-Eng.pdf"
+            data-booklet-full="https://share.google/9DD5kkC3N3jEHfiUL">
+            Preview booklet
+          </button>
+        </article>
       </div>
     </div>
   </section>
@@ -267,6 +302,18 @@
     </div>
   </div>
 
+  <div id="booklet-modal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4" onclick="closeBookletModal(event)">
+    <div class="booklet-modal-card">
+      <button class="video-modal-close booklet-modal-close" type="button" onclick="closeBookletModal(event)" aria-label="Close booklet preview">&times;</button>
+      <div class="booklet-modal-header">
+        <h3 id="booklet-modal-title" class="booklet-modal-title"></h3>
+      </div>
+      <div class="booklet-modal-frame-wrap">
+        <iframe id="booklet-modal-frame" src="" loading="lazy" title="Booklet preview"></iframe>
+      </div>
+    </div>
+  </div>
+
   <script src="site.js"></script>
   <script>
     const GOOGLE_SHEET_ID = '1NJWKslbv7ZinFvJbe-c1DE24foFcJiCRncfNK-Lrm1Q';
@@ -370,6 +417,7 @@
 
       setupParallax();
       setupVisaLookup();
+      setupBookletViewer();
     });
 
     function setupParallax() {
@@ -712,6 +760,53 @@
 
       const modal = document.getElementById('city-video-modal');
       const frame = document.getElementById('city-video-modal-frame');
+      frame.src = '';
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }
+
+    function setupBookletViewer() {
+      const buttons = document.querySelectorAll('.booklet-open-btn');
+      if (!buttons.length) return;
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const title = button.dataset.bookletTitle || 'Booklet preview';
+          const previewUrl = button.dataset.bookletPreview || '';
+          openBookletModal({ title, previewUrl });
+        });
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeBookletModal();
+      });
+    }
+
+    function openBookletModal({ title, previewUrl }) {
+      const modal = document.getElementById('booklet-modal');
+      const modalTitle = document.getElementById('booklet-modal-title');
+      const frame = document.getElementById('booklet-modal-frame');
+      if (!modal || !modalTitle || !frame || !previewUrl) return;
+
+      modalTitle.textContent = title || 'Booklet preview';
+      frame.src = `${previewUrl}#toolbar=1&navpanes=0&scrollbar=1`;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeBookletModal(event) {
+      if (event) {
+        const isBackdrop = event.target.id === 'booklet-modal';
+        const isClose = event.target.classList.contains('booklet-modal-close');
+        if (!isBackdrop && !isClose) return;
+      }
+
+      const modal = document.getElementById('booklet-modal');
+      const frame = document.getElementById('booklet-modal-frame');
+      if (!modal || !frame) return;
+
       frame.src = '';
       modal.classList.add('hidden');
       modal.classList.remove('flex');
