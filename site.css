@@ -1635,9 +1635,17 @@ img {
 #video-modal,
 #city-video-modal,
 #booklet-modal {
-  align-items: flex-start;
   overflow-y: auto;
   padding-bottom: 16px;
+}
+
+#video-modal {
+  align-items: flex-start;
+}
+
+#city-video-modal,
+#booklet-modal {
+  align-items: center;
 }
 
 #video-modal .video-modal-card,
